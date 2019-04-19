@@ -1,0 +1,39 @@
+.index-title{
+    color: rgba(0,0,0,.84);
+    margin-top:20px;
+}
+.index-sub{
+    color: rgba(0,0,0,.54);
+
+}
+.index-text{
+    margin-top:20px;
+    color: rgba(0,0,0,.44);
+}
+.index-image{
+    width: 400px;
+}
+.social-icon{
+    color: rgba(0,0,0,.44);
+    font-size:1.5rem;
+}
+.clock{
+    margin-left: 25px;
+}
+.jumbotron.fortags a {
+    background: rgb(99, 5, 140) !important;
+}
+.error{
+    text-align: center !important;
+}
+
+.pagewrap {
+    margin: 0;
+    padding: 0;
+}
+
+.clip-circle {
+    clip-path: circle(40px at center);
+    /* OLD VALUE example: circle(245px, 140px, 50px); */
+    /* Yep, even the new clip-path has deprecated stuff. */
+}

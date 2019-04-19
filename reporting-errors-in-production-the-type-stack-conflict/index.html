@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<meta content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace" name="description">
+	
+	
+	<link rel="canonical" href="https://example.com/reporting-errors-in-production-the-type-stack-conflict">
+	
+	<meta name="generator" content="Hugo 0.54.0" />
+	
+	<link rel="icon" href="/images/logo-secondary.png">
+	
+	<title>Reporting Errors in Production: The type/stack Conflict | MinuteMedia</title>
+	
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="/css/medium.css" rel="stylesheet">
+	<link href="/css/additional.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://example.com//">
+
+            
+            <img src="/images/logo-secondary.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="/">About Us</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+    <div class="main-content">
+        
+        <div class="container  pagewrap">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share">
+    <p>Share</p>
+    <ul>
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20type%2fstack%20Conflict&url=https%3a%2f%2fexample.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+        <i class="fab fa-twitter"></i>
+        </a>
+        </li>
+        
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2fexample.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        </li>
+        
+    </ul>
+
+    
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        
+                        <h1 class="posttitle">Reporting Errors in Production: The type/stack Conflict</h1> 
+                        	
+                        
+                        <div class="post-top-meta">
+                            
+                            <div >
+                                <a target="_blank" class="link-dark">Oren Rosen</a><br>
+                                <span class="author-description">
+                                    
+                                    <br>
+                                    
+                                    <i class="far fa-star"></i>
+                                    Apr 9, 2019
+                                    <i class="far fa-clock clock"></i>
+                                    7 min read
+                                </span>					
+                            </div>
+                        </div>			
+                                                
+                    </div>
+
+                    
+                    
+                        <img class="featured-image img-fluid" src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_464,w_825/v1555678170/shape/cover/entertainment/boy-mic-20760e0d49a5f7bbe5a78c6a8e314319.jpg" alt="thumbnail for this post">
+                    
+                    
+                    
+                    
+                    <div class="article-post">
+                        
+
+<p>Lately, my team and I started reporting errors to Sentry. I hate to admit it, but only then did I notice that my errors aren’t telling me much at a glance. I either got my custom error types, or a relevant stack trace, not both.</p>
+
+<p>In this post I’ll go over these concerns and suggest simple ways to have both. After all, the main reason we have errors is for us to have something to report on when our application fails, isn’t it?</p>
+
+<h2 id="what-reasonable-reporting-should-look-like">What reasonable reporting should look like:</h2>
+
+<p>First let’s review some of the main concerns when handling errors in production:</p>
+
+<p><em><strong>The Message</strong></em> should be composed of all the messages in the error chain.</p>
+
+<p><em><strong>The Stack Trace</strong></em> should be from where the error was created, not from where it was reported.</p>
+
+<p><strong><em>The Type</em></strong> is preferably a name that means something to us. Take for example this mock Sentry interface:</p>
+
+<p><img src="https://drive.google.com/a/minutemedia.com/uc?export=view&amp;id=18nwj0mq-UKVsn1ecx6EGByS5zzUBpmk0" alt="sentry mock" /><br />
+<code>image</code>: Sentry errors interface mock</p>
+
+<p><code>sql.updateArticleError</code> is the only name which means something to us. All other types belong to some framework which created them.</p>
+
+<p>To understand how we can fill these requirements, we first need to talk about a popular player in this field: <code>pkg/errors</code>.</p>
+
+<h2 id="pkg-errors"><code>pkg/errors</code></h2>
+
+<p><a href="https://github.com/pkg/errors"><code>pkg/errors</code></a>, created in 2016 by Dave Chaney, is a replacement for the standard error package.
+It provides a great functionality for wrapping and unwrapping an error. You can achieve this by these two main functions:</p>
+
+<pre><code class="language-golang">// Wrap annotates cause with a message.
+func Wrap(cause error, message string) error {}
+
+// Cause unwraps an annotated error.
+func Cause(err error) error {}
+</code></pre>
+
+<p>Not only that, it also provides a stack trace for the errors it creates. Just cast the err to <code>stacker</code> and get the stack trace:</p>
+
+<pre><code class="language-golang">type stacker interface {
+	StackTrace() pkgErrors.StackTrace
+}
+
+if err != nil {
+	if tracer, ok := err.(stacker); ok {
+		errStack := tracer.StackTrace()
+		fmt.Printf(&quot;error stack trace:\n%+v\n\n&quot;, errStack)
+	}
+
+	cause := pkgErrors.Cause(err)
+	if tracer, ok := cause.(stacker); ok {
+		origStack := tracer.StackTrace()
+		fmt.Printf(&quot;original stack trace:\n%+v\n\n&quot;, origStack)
+	}
+}
+</code></pre>
+
+<p>Thanks to this package, the message we will see in Sentry will be composed of all the messages during the chain. Unfortunately, if we want the relevant stack trace and our own custom type, we encounter a small issue.</p>
+
+<h2 id="the-stacktrace-type-conflict">The StackTrace/Type conflict</h2>
+
+<p>Sentry unwraps the error before actually reporting it. You can see in the <a href="https://github.com/getsentry/raven-go/blob/master/client.go#L747"><code>CaptureError</code></a> implementation, that it uses <code>Cause</code> on the error reported.</p>
+
+<p>The base of the conflict lies in the fact that the <strong>same</strong> error is used both for the type and for the stack trace. We can easily have a custom type <strong>or</strong> a relevant stack trace. Not both.</p>
+
+<p>The next pseudo flow gives us a better idea of what’s happening:</p>
+
+<p><img src="https://drive.google.com/a/minutemedia.com/uc?export=view&amp;id=1XhX-rP5DlKOFxd-loEWaYA5ybK6l-sV3" alt="flow" /><br />
+image: <code>publishing.Service</code> is calling <code>articlesRepository</code> to update an article, which is calling its dependency, an external db handler.</p>
+
+<p>Imagine that <code>extsql.db</code> returns an error. How should we treat it in our <code>articlesRepository</code>?</p>
+
+<h3 id="1-create-a-new-error">1) Create a new error</h3>
+
+<p>We can create a new error using <code>pkg/errors</code>:</p>
+
+<pre><code class="language-golang">if err := r.db.Exec(...); err != nil {
+      return pkgErrors.Errorf(&quot;articlesRepository.Update: %s&quot;, err.Error())
+}
+</code></pre>
+
+<p>In this case, we will have the stack trace from here, where it was created, but the type will be meaningless to us. This is because it’s the type of the inner struct of <code>pkg/errors</code>.</p>
+
+<h3 id="2-wrap-a-custom-error">2) Wrap a custom error</h3>
+
+<p>Assuming we have this <a href="https://dave.cheney.net/2016/04/07/constant-errors">const error</a> in our sql package:</p>
+
+<pre><code class="language-golang">
+package sql
+
+type articlesRepositoryError string
+func (e articlesRepositoryError) Error() string { return string(e) }
+
+const updateArticleError = articlesRepositoryError(&quot;update article failed&quot;)
+</code></pre>
+
+<p>We can wrap it like this:</p>
+
+<pre><code class="language-golang">if err != nil {
+	return pkgErrors.Wrapf(updateArticleError, &quot;db failed exec: %s&quot;, err)
+}
+</code></pre>
+
+<p>Great, so we will see <code>sql.articlesRepositoryError</code> as the type. Yes, but unfortunately we will have an irrelevant stack trace. This is because our error doesn’t implement the <code>stacker</code> interface.</p>
+
+<h3 id="3-wrap-the-error-from-the-db">3) Wrap the error from the db</h3>
+
+<p>What’s even worse, is the case when we wrap an external error, which may not follow <code>pkg/errors</code> practice:</p>
+
+<pre><code class="language-golang">if err := r.db.Exec(...); err != nil {
+	return pkgErrors.Wrap(err, &quot;articlesRepository.Update”)
+}
+</code></pre>
+
+<p>If the external sql supports <code>pkg/errors</code> and we don&rsquo;t interested in our own type, it might be ok and we&rsquo;ll want to do just that. But in some other cases, this error might just be <code>errors.String</code>. We won’t have neither a stack trace, nor a meaningful type.</p>
+
+<p>So what’s the problem? Let’s just implement this <code>stacker</code> interface in all of our custom types.<br />
+No no, don’t worry, there is always another solution - compromise&hellip;</p>
+
+<h3 id="compromise-1-keep-the-stack-simple-complicate-the-type">Compromise 1: keep the stack simple, complicate the type</h3>
+
+<p>How will you make your custom error implement the <code>stacker</code> interface, without actually implementing it? You guessed it, you can use embedded struct.</p>
+
+<p>If our custom error is a struct embedding <code>stacker</code>, we can use it as the <strong>origin</strong> error without worries.</p>
+
+<pre><code class="language-golang">package sql
+
+// This is our custom type sql.updateArticleError, which embeds stacker
+type articlesRepositoryError struct {
+	error
+	stacker
+}
+
+func (r *articleRepo) UpdateArticle(...) error { 
+	// do some stuff
+
+	if err := r.db.Exec(...); err != nil {
+		// first create a new error using pkg/errors
+		pkgErr := pkgErrors.Errorf(&quot;articles.Update: %s&quot;, err)
+
+		// cast to stacker, and use it to create our type
+		tracer, _ := pkgErr.(stacker)
+		return &amp;articlesRepositoryError{
+			error:   pkgErr,
+			stacker: tracer,
+		}
+	}
+
+	// do other stuff
+	return nil
+}
+</code></pre>
+
+<p>This way we will get our own type <code>sql.articlesRepositoryError</code> and the stack trace. We won’t need to do any extra work on the reporting side. This is also thanks to Sentry&rsquo;s support of the <code>stacker</code> interface.</p>
+
+<h3 id="compromise-2-keep-the-type-simple-put-extra-work-for-the-stack-trace">Compromise 2: keep the type simple, put extra work for the stack trace</h3>
+
+<p>Ok, so not everybody likes to embed a struct on a daily basis. Let’s stick with the type we defined earlier and just wrap it:</p>
+
+<pre><code class="language-golang">package sql
+
+type articlesRepositoryError string
+func (e articlesRepositoryError) Error() string { return string(e) }
+const updateArticleErr = articlesRepositoryError(&quot;article update failed&quot;)
+
+func (r *articleRepo) UpdateArticle(...) error {
+	// do some stuff
+
+	if err := r.db.Exec(...); err != nil {
+		// wrapping our custom error
+		return pkgErrors.Wrapf(updateArticleErr, &quot;db: %s&quot;, err)
+	}
+
+	// do other stuff
+	return nil
+}
+</code></pre>
+
+<p>When this error is reported, we will see our type <code>sql.articlesRepositoryError</code>, but not the relevant stack trace, since <code>updateArticleErr</code> doesn&rsquo;t implement <code>stacker</code>. The compromise will be to just report the stack as an extra parameter. Instead of the main view, we will see it in the ‘additional data’ section in Sentry.</p>
+
+<p>We will get the deepest stack trace we could find, by casting the errors in the chain to stacker:</p>
+
+<pre><code class="language-golang">type causer interface {
+	Cause() error
+}
+
+func deepestStackTrace(err error) pkgErrors.StackTrace {
+	var stackTrace pkgErrors.StackTrace
+	for err != nil {
+		if tracer, ok := err.(stacker); ok {
+			stackTrace = tracer.StackTrace()
+		}
+
+		if cause, ok := err.(causer); ok {
+			err = cause.Cause()
+			continue
+		}
+
+		err = nil
+	}
+
+	return stackTrace
+}
+</code></pre>
+
+<p>After you get the stackTrace, you can pass it to Sentry as a slice of strings. Sentry handles it pretty well.</p>
+
+<pre><code class="language-golang">func stackTraceStrings(err error) []string {
+	toRet := []string{}
+	for _, frame := range deepestStackTrace(err) {
+		toRet = append(toRet, fmt.Sprintf(&quot;%+v&quot;, frame))
+	}
+
+	return toRet
+}
+</code></pre>
+
+<p>A small improvement is to add this stack trace only in cases the original error isn’t a stacker:</p>
+
+<pre><code class="language-golang">func shouldAddStack(err error) bool {
+	cause := pkgErrors.Cause(err)
+	_, ok := cause.(stacker)
+	return !ok
+}
+</code></pre>
+
+<p>Putting it all together, our Sentry abstraction will look like this:</p>
+
+<pre><code class="language-golang">type extra map[string]interface{}
+
+// implements sentry.Interface
+func (e extra) Class() string {
+	return &quot;extra&quot;
+}
+
+func ReportError(err error) {
+	params := map[string]interface{}{}
+	if shouldAddStack(err) {
+		params[&quot;stackTrace&quot;] = stackTraceStrings(err)
+	}
+
+	client := raven.New(&quot;some@dsn&quot;)
+	client.CaptureError(err, nil, extra(params))
+}
+</code></pre>
+
+<p>It seams like manually adding the stack trace is a lot of work, but remember, it is done once. So it might be a better solution than doing an extra work on every error type.</p>
+
+<h2 id="what-s-next">What’s next</h2>
+
+<p>We just saw, what I believe is, the very basic concerns when it comes to reporting our errors. In the next post, we’ll see how we can wrap an error of a dependency, but still keep our custom error type. Not very surprisingly, it can be easily done using a simple custom errors package.</p>
+
+<p>Regarding the “deepest stack trace”, it’s not a new idea. If it is implemented in Sentry, it will resolve this whole conflict issue :)</p>
+
+<p>Meanwhile, the <a href="https://go.googlesource.com/proposal/+/master/design/29934-error-values.md">Go 2.0 errors inspection proposal</a>, which just came out a couple of months ago, shares some of <code>pkg/errors</code> ideas. Very interesting to read and exciting to see what will happen with errors in Go in the future.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/golang">golang</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/errors">errors</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/sentry">sentry</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="/how-monorepo-is-helping-us-work-better">How Monorepo is helping us work better &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+			<div class="d-md-flex align-items-center justify-content-center h-100">
+				<h2 class="d-md-block d-none align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+			</div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+			
+			<a href="/tags/errors">errors</a>
+			
+			<a href="/tags/golang">golang</a>
+			
+			<a href="/tags/interesting">interesting</a>
+			
+			<a href="/tags/post">post</a>
+			
+			<a href="/tags/sentry">sentry</a>
+			
+		</div>
+	</div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright MinuteMedia - All rights reserved
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    
+<script src="/js/mediumish.js"></script>
+
+    </body>
+</html>

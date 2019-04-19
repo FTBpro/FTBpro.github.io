@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on MinuteMedia</title>
+    <link>https://example.com/tags/post/</link>
+    <description>Recent content in Post on MinuteMedia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MinuteMedia - All rights reserved</copyright>
+    <lastBuildDate>Mon, 01 Oct 2018 15:25:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How Monorepo is helping us work better</title>
+      <link>https://example.com/how-monorepo-is-helping-us-work-better/</link>
+      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/how-monorepo-is-helping-us-work-better/</guid>
+      <description>As any other mature startup that is moving to its growth stage, we had to rebuild our infrastructure. Our initial infrastructure was a Monolithic application in Ruby on Rails.</description>
+    </item>
+    
+    <item>
+      <title>Place Holder 4</title>
+      <link>https://example.com/posts/place-holder-4/</link>
+      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/posts/place-holder-4/</guid>
+      <description>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Place Holder 5</title>
+      <link>https://example.com/posts/place-holder-5/</link>
+      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/posts/place-holder-5/</guid>
+      <description>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Place Holder 6</title>
+      <link>https://example.com/posts/place-holder-6/</link>
+      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/posts/place-holder-6/</guid>
+      <description>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+    </item>
+    
+    <item>
+      <title>Place Holder 7</title>
+      <link>https://example.com/posts/place-holder-7/</link>
+      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/posts/place-holder-7/</guid>
+      <description>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
+    </item>
+    
+    <item>
+      <title>The lost chapter to making your pods successful</title>
+      <link>https://example.com/the-lost-chapter-to-making-your-pods-successful/</link>
+      <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/the-lost-chapter-to-making-your-pods-successful/</guid>
+      <description>You’ve reached the stage of exploring the option of utilizing the pod structure or maybe you’ve already started it. You’ve reviewed the different guides which talk about processes, structure and efficiency, everything sounds great but you feel like something is missing&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

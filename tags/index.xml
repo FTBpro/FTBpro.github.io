@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
-    <lastBuildDate>Sun, 10 Mar 2019 16:25:19 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2019 15:25:19 +0200</lastBuildDate>
     
 	<atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Agile</title>
+      <link>https://example.com/tags/agile/</link>
+      <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cross Functional</title>
+      <link>https://example.com/tags/cross-functional/</link>
+      <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/tags/cross-functional/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Errors</title>
@@ -33,18 +51,36 @@
     <item>
       <title>Interesting</title>
       <link>https://example.com/tags/interesting/</link>
-      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
       <guid>https://example.com/tags/interesting/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Pods</title>
+      <link>https://example.com/tags/pods/</link>
+      <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/tags/pods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Post</title>
       <link>https://example.com/tags/post/</link>
-      <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
       <guid>https://example.com/tags/post/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scrum</title>
+      <link>https://example.com/tags/scrum/</link>
+      <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/tags/scrum/</guid>
       <description></description>
     </item>
     
@@ -54,6 +90,15 @@
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
       <guid>https://example.com/tags/sentry/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teams</title>
+      <link>https://example.com/tags/teams/</link>
+      <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://example.com/tags/teams/</guid>
       <description></description>
     </item>
     

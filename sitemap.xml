@@ -3,33 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.com/reporting-errors-in-production-the-type-stack-conflict/</loc>
-    <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <loc>https://example.com/the-lost-chapter-to-making-your-pods-successful/</loc>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://example.com/how-monorepo-is-helping-us-work-better/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.com/posts/place-holder-4/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/posts/place-holder-5/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/posts/place-holder-6/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://example.com/posts/place-holder-8/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <loc>https://example.com/reporting-errors-in-production-the-type-stack-conflict/</loc>
+    <lastmod>2019-04-09T22:25:19+02:00</lastmod>
   </url>
   
   <url>
@@ -38,12 +23,29 @@
   </url>
   
   <url>
-    <loc>https://example.com/the-lost-chapter-to-making-your-pods-successful/</loc>
+    <loc>https://example.com/post4/</loc>
     <lastmod>2018-10-08T18:55:29+02:00</lastmod>
   </url>
   
   <url>
+    <loc>https://example.com/post5/</loc>
+    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/agile/</loc>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://example.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/cross-functional/</loc>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -61,24 +63,36 @@
   
   <url>
     <loc>https://example.com/tags/interesting/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://example.com/</loc>
-    <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/pods/</loc>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://example.com/tags/post/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://example.com/posts/</loc>
-    <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/scrum/</loc>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -90,7 +104,13 @@
   
   <url>
     <loc>https://example.com/tags/</loc>
-    <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/teams/</loc>
+    <lastmod>2019-04-22T15:25:19+02:00</lastmod>
     <priority>0</priority>
   </url>
   

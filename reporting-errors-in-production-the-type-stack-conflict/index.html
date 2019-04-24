@@ -1,35 +1,43 @@
 <!DOCTYPE html>
-<html lang="en-us"><head>
-	<meta charset="utf-8">
-	<meta name="robots" content="noindex">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<meta content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace" name="description">
-	
-	
-	<link rel="canonical" href="https://example.com/reporting-errors-in-production-the-type-stack-conflict">
-	
-	<meta name="generator" content="Hugo 0.54.0" />
-	
-	<link rel="icon" href="/images/logo-secondary.png">
-	
-	<title>Reporting Errors in Production: The Type/Stack Conflict | MinuteMedia</title>
-	
-	
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-	 crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
-	
-	
-	
-	<link rel="stylesheet" href="/css/style.min.2d99f601aa781d598534358469e9a377.css">
-</head>
-<body>
+<html lang="en-us">
+    <head><meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace" name="description">
+
+
+<link rel="canonical" href="https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict">
+
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="icon" href="/images/logo-secondary.png">
+
+<title>Reporting Errors in Production: The Type/Stack Conflict | MinuteMedia</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.min.ef5bd7c1d0ac41bbae5e660d87345857.css">
+
+<meta property="og:title" content="Reporting Errors in Production: The Type/Stack Conflict"/>
+<meta property="og:description" content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace"/>
+<meta property="og:type" content="article"/>
+
+<meta property="og:image" content="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_464,w_825/v1555678170/shape/cover/entertainment/boy-mic-20760e0d49a5f7bbe5a78c6a8e314319.jpg"/>                       
+
+
+    </head>
+    <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
     <div class="container pr-0">
         
-        <a class="navbar-brand" href="https://example.com//">
+        <a class="navbar-brand" href="https://ftbpro.github.io//">
 
             
             <img src="/images/logo-secondary.png" alt="logo">
@@ -69,13 +77,13 @@
     <p>Share</p>
     <ul>
         <li class="ml-1 mr-1">
-        <a target="_blank" href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20Type%2fStack%20Conflict&url=https%3a%2f%2fexample.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20Type%2fStack%20Conflict&url=https%3a%2f%2fftbpro.github.io%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
         <i class="fab fa-twitter"></i>
         </a>
         </li>
         
         <li class="ml-1 mr-1">
-        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2fexample.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2fftbpro.github.io%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
         <i class="fab fa-facebook-f"></i>
         </a>
         </li>
@@ -92,20 +100,16 @@
                         	
                         
                         <div class="post-top-meta">
-                            
-                            <div >
-                                <a target="_blank" class="link-dark">Oren Rosen</a><br>
-                                <span class="author-description">
-                                    
-                                    <br>
-                                    
-                                    <i class="far fa-star"></i>
-                                    Apr 9, 2019
-                                    <i class="far fa-clock clock"></i>
-                                    7 min read
-                                </span>					
-                            </div>
-                        </div>			
+<div >
+    <a target="_blank" class="link-dark">Oren Rosen</a><br>
+    <span class="author-description">
+        
+        <i class="far fa-star"></i>
+        Apr 9, 2019
+        <i class="far fa-clock clock"></i>
+        7 min read
+    </span>					
+</div></div>			
                                                 
                     </div>
 
@@ -399,7 +403,7 @@ func ReportError(err error) {
                         <a class="d-block col-md-6" href="/how-monorepo-is-helping-us-work-better"> &laquo; How Monorepo is helping us work better</a>
                     
                     
-                        <a class="d-block col-md-6 text-lg-right" href="/post4">post4 post4 post4 post4 post4 &raquo;</a>
+                        <a class="d-block col-md-6 text-lg-right" href="/diy-creating-a-great-relationship-between-dev-and-design">DIY: Creating a Great Relationship Between Dev &amp; Design &raquo;</a>
                     
                     <div class="clearfix"></div>
                     </div>

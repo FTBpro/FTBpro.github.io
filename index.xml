@@ -2,68 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>MinuteMedia product and tech blog on MinuteMedia</title>
-    <link>https://example.com/</link>
+    <link>https://ftbpro.github.io/</link>
     <description>Recent content in MinuteMedia product and tech blog on MinuteMedia</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
     <lastBuildDate>Mon, 22 Apr 2019 15:25:19 +0200</lastBuildDate>
     
-	<atom:link href="https://example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ftbpro.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>The lost chapter to making your pods successful</title>
-      <link>https://example.com/the-lost-chapter-to-making-your-pods-successful/</link>
+      <title>The Lost Chapter to Making Your Pods Successful</title>
+      <link>https://ftbpro.github.io/the-lost-chapter-to-making-your-pods-successful/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://example.com/the-lost-chapter-to-making-your-pods-successful/</guid>
+      <guid>https://ftbpro.github.io/the-lost-chapter-to-making-your-pods-successful/</guid>
       <description>You&amp;#39;ve reached the stage of exploring the option of utilizing the pod structure or maybe you&amp;#39;ve already started it. You&amp;#39;ve reviewed the different guides which talk about processes, structure and efficiency, everything sounds great but you feel like something is missing&amp;hellip; You are right, there is a missing chapter which relates to the human aspect and the effect moving to pods has on it.</description>
     </item>
     
     <item>
       <title>How Monorepo is helping us work better</title>
-      <link>https://example.com/how-monorepo-is-helping-us-work-better/</link>
+      <link>https://ftbpro.github.io/how-monorepo-is-helping-us-work-better/</link>
       <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
-      <guid>https://example.com/how-monorepo-is-helping-us-work-better/</guid>
+      <guid>https://ftbpro.github.io/how-monorepo-is-helping-us-work-better/</guid>
       <description>&lt;p&gt;As any other mature startup that is moving to its growth stage, we had to rebuild our infrastructure.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Reporting Errors in Production: The Type/Stack Conflict</title>
-      <link>https://example.com/reporting-errors-in-production-the-type-stack-conflict/</link>
+      <link>https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict/</link>
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
-      <guid>https://example.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
+      <guid>https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict/</guid>
       <description>Lately, my team and I started reporting errors to Sentry. I hate to admit it, but only then did I notice that my errors aren’t telling me much at a glance.</description>
     </item>
     
     <item>
       <title>Post 5</title>
-      <link>https://example.com/users/eddy/</link>
+      <link>https://ftbpro.github.io/users/eddy/</link>
       <pubDate>Mon, 01 Oct 2018 15:25:19 +0200</pubDate>
       
-      <guid>https://example.com/users/eddy/</guid>
+      <guid>https://ftbpro.github.io/users/eddy/</guid>
       <description>Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean semper libero quis dictum dapibus. Nulla egestas vitae augue eu rutrum. Duis ullamcorper dictum ipsum.</description>
     </item>
     
     <item>
-      <title>post4 post4 post4 post4 post4</title>
-      <link>https://example.com/post4/</link>
+      <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>
+      <link>https://ftbpro.github.io/diy-creating-a-great-relationship-between-dev-and-design/</link>
       <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
       
-      <guid>https://example.com/post4/</guid>
-      <description>&lt;p&gt;You&amp;#39;ve reached the stage of exploring the option of utilizing the pod structure or maybe you&amp;#39;ve already started it.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>post5 post5  post5 v post5 v post5post5 </title>
-      <link>https://example.com/post5/</link>
-      <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
-      
-      <guid>https://example.com/post5/</guid>
-      <description>&lt;p&gt;You&amp;#39;ve reached the stage of exploring the option of utilizing the pod structure or maybe you&amp;#39;ve already started it.&lt;/p&gt;</description>
+      <guid>https://ftbpro.github.io/diy-creating-a-great-relationship-between-dev-and-design/</guid>
+      <description>A successful relationship between dev &amp;amp; design is key to achieving a good product. However, unfortunately in most places it is not the case. Today in Minute Media, designers and developers are working together in a good and healthy atmosphere - but it took a lot of work to get to this point, and it takes constant work to maintain it.</description>
     </item>
     
   </channel>

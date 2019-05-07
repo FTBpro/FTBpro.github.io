@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Authors on MinuteMedia Tech and Product Blog</title>
+    <link>https://ftbpro.github.io/authors/</link>
+    <description>Recent content in Authors on MinuteMedia Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MinuteMedia - All rights reserved</copyright>
+    
+	<atom:link href="https://ftbpro.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Eddy</title>
+      <link>https://ftbpro.github.io/authors/eddy/</link>
+      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://ftbpro.github.io/authors/eddy/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cross Functional on MinuteMedia</title>
+    <title>Cross Functional on MinuteMedia Tech and Product Blog</title>
     <link>https://ftbpro.github.io/tags/cross-functional/</link>
-    <description>Recent content in Cross Functional on MinuteMedia</description>
+    <description>Recent content in Cross Functional on MinuteMedia Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
@@ -19,6 +19,15 @@
       
       <guid>https://ftbpro.github.io/the-lost-chapter-to-making-your-pods-successful/</guid>
       <description>You&amp;#39;ve reached the stage of exploring the option of utilizing the pod structure or maybe you&amp;#39;ve already started it. You&amp;#39;ve reviewed the different guides which talk about processes, structure and efficiency, everything sounds great but you feel like something is missing&amp;hellip; You are right, there is a missing chapter which relates to the human aspect and the effect moving to pods has on it.</description>
+    </item>
+    
+    <item>
+      <title>How Monorepo is helping us work better</title>
+      <link>https://ftbpro.github.io/how-monorepo-is-helping-us-work-better/</link>
+      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://ftbpro.github.io/how-monorepo-is-helping-us-work-better/</guid>
+      <description>&lt;p&gt;As any other mature startup that is moving to its growth stage, we had to rebuild our infrastructure.&lt;/p&gt;</description>
     </item>
     
   </channel>

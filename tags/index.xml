@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on MinuteMedia</title>
+    <title>Tags on MinuteMedia Tech and Product Blog</title>
     <link>https://ftbpro.github.io/tags/</link>
-    <description>Recent content in Tags on MinuteMedia</description>
+    <description>Recent content in Tags on MinuteMedia Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
@@ -67,15 +67,6 @@
     </item>
     
     <item>
-      <title>Interesting</title>
-      <link>https://ftbpro.github.io/tags/interesting/</link>
-      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
-      
-      <guid>https://ftbpro.github.io/tags/interesting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Pods</title>
       <link>https://ftbpro.github.io/tags/pods/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
@@ -85,18 +76,9 @@
     </item>
     
     <item>
-      <title>Post</title>
-      <link>https://ftbpro.github.io/tags/post/</link>
-      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
-      
-      <guid>https://ftbpro.github.io/tags/post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Process</title>
       <link>https://ftbpro.github.io/tags/process/</link>
-      <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
       <guid>https://ftbpro.github.io/tags/process/</guid>
       <description></description>
@@ -126,6 +108,15 @@
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
       <guid>https://ftbpro.github.io/tags/teams/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://ftbpro.github.io/tags/tools/</link>
+      <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://ftbpro.github.io/tags/tools/</guid>
       <description></description>
     </item>
     

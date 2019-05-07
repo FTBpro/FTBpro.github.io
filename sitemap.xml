@@ -5,131 +5,146 @@
   <url>
     <loc>https://ftbpro.github.io/the-lost-chapter-to-making-your-pods-successful/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/how-monorepo-is-helping-us-work-better/</loc>
     <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict/</loc>
     <lastmod>2019-04-09T22:25:19+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://ftbpro.github.io/users/eddy/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/diy-creating-a-great-relationship-between-dev-and-design/</loc>
     <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/agile/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ftbpro.github.io/categories/</loc>
+    <loc>https://ftbpro.github.io/authors/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/cross-functional/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/design/</loc>
     <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/development/</loc>
     <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ftbpro.github.io/authors/eddy/</loc>
+    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/errors/</loc>
     <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/golang/</loc>
     <lastmod>2019-04-09T22:25:19+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ftbpro.github.io/tags/interesting/</loc>
-    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/pods/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://ftbpro.github.io/tags/post/</loc>
-    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/posts/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/process/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/scrum/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/sentry/</loc>
     <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ftbpro.github.io/tags/teams/</loc>
     <lastmod>2019-04-22T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://ftbpro.github.io/users/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <loc>https://ftbpro.github.io/tags/tools/</loc>
+    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   

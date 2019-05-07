@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shani Merdler on MinuteMedia</title>
+    <link>https://ftbpro.github.io/authors/shani/</link>
+    <description>Recent content in Shani Merdler on MinuteMedia</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MinuteMedia - All rights reserved</copyright>
+    
+	<atom:link href="https://ftbpro.github.io/authors/shani/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

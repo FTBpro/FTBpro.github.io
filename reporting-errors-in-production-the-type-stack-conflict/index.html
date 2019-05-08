@@ -23,7 +23,7 @@
 
 
 
-<link rel="stylesheet" href="/css/style.min.061b717d171f766a955460f4be1aaded.css">
+<link rel="stylesheet" href="/css/style.min.0693e2a620adaa7cb22f84a08338dd18.css">
 
 <meta property="og:title" content="Reporting Errors in Production: The Type/Stack Conflict"/>
 <meta property="og:description" content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace"/>
@@ -57,7 +57,11 @@
             <ul class="navbar-nav ml-auto">
                  
                 <li class="nav-item ">
-                    <a class="nav-link" href="/">About Us</a>
+                    <a class="nav-link" href="https://www.minutemedia.com/careers">Careers</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.minutemedia.com/about">About Us</a>
                 </li>
                 
             </ul>
@@ -128,7 +132,7 @@
 
 <p>In this post I’ll go over these concerns and suggest simple ways to have both. After all, the main reason we have errors is for us to have something to report on when our application fails, isn’t it?</p>
 
-<h2 id="what-reasonable-reporting-should-look-like">What reasonable reporting should look like:</h2>
+<h2 id="what-reasonable-reporting-should-look-like">What reasonable reporting should look like</h2>
 
 <p>First let’s review some of the main concerns when handling errors in production:</p>
 
@@ -145,7 +149,7 @@
 
 <p>To understand how we can fill these requirements, we first need to talk about a popular player in this field: <code>pkg/errors</code>.</p>
 
-<h2 id="pkg-errors"><code>pkg/errors</code></h2>
+<h2 id="pkg-errors">pkg/errors</h2>
 
 <p><a href="https://github.com/pkg/errors"><code>pkg/errors</code></a>, created in 2016 by Dave Chaney, is a replacement for the standard error package.
 It provides a great functionality for wrapping and unwrapping an error. You can achieve this by these two main functions:</p>
@@ -160,7 +164,7 @@ func Cause(err error) error {}
 <p>Not only that, it also provides a stack trace for the errors it creates. Just cast the err to <code>stacker</code> and get the stack trace:</p>
 
 <pre><code class="language-golang">type stacker interface {
-	StackTrace() pkgErrors.StackTrace
+    StackTrace() pkgErrors.StackTrace
 }
 
 if err != nil {

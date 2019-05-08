@@ -142,7 +142,7 @@
 
 <p><strong><em>The Type</em></strong> is preferably a name that means something to us. Take for example this mock Sentry interface:</p>
 
-<p><img src="https://drive.google.com/a/minutemedia.com/uc?export=view&amp;id=18nwj0mq-UKVsn1ecx6EGByS5zzUBpmk0" alt="sentry mock" /><br />
+<p><img src="https://images2.minutemediacdn.com/image/upload/f_auto/v1557305986/techblog/sentry" alt="sentry mock" /><br />
 <code>image</code>: Sentry errors interface mock</p>
 
 <p><code>sql.updateArticleError</code> is the only name which means something to us. All other types belong to some framework which created them.</p>
@@ -191,7 +191,7 @@ if err != nil {
 
 <p>The next pseudo flow gives us a better idea of what’s happening:</p>
 
-<p><img src="https://drive.google.com/a/minutemedia.com/uc?export=view&amp;id=1XhX-rP5DlKOFxd-loEWaYA5ybK6l-sV3" alt="flow" /><br />
+<p><img src="https://images2.minutemediacdn.com/image/upload/f_auto,g_auto/v1557305986/techblog/flow" alt="flow" /><br />
 image: <code>publishing.Service</code> is calling <code>articlesRepository</code> to update an article, which is calling its dependency, an external db handler.</p>
 
 <p>Imagine that <code>extsql.db</code> returns an error. How should we treat it in our <code>articlesRepository</code>?</p>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Design on MinuteMedia Tech and Product Blog</title>
-    <link>https://ftbpro.github.io/tags/design/</link>
+    <link>https://tech.minutemedia.com/tags/design/</link>
     <description>Recent content in Design on MinuteMedia Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
     <lastBuildDate>Tue, 01 Mar 2016 15:25:19 +0200</lastBuildDate>
     
-	<atom:link href="https://ftbpro.github.io/tags/design/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tech.minutemedia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>
-      <link>https://ftbpro.github.io/diy-creating-a-great-relationship-between-dev-and-design/</link>
+      <link>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</link>
       <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/diy-creating-a-great-relationship-between-dev-and-design/</guid>
+      <guid>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</guid>
       <description>A successful relationship between dev &amp;amp; design is key to achieving a good product. However, unfortunately in most places it is not the case. Today in Minute Media, designers and developers are working together in a good and healthy atmosphere - but it took a lot of work to get to this point, and it takes constant work to maintain it.</description>
     </item>
     

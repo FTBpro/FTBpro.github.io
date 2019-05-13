@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on MinuteMedia Tech and Product Blog</title>
-    <link>https://ftbpro.github.io/tags/golang/</link>
+    <link>https://tech.minutemedia.com/tags/golang/</link>
     <description>Recent content in Golang on MinuteMedia Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
     <lastBuildDate>Sun, 10 Mar 2019 16:25:19 +0200</lastBuildDate>
     
-	<atom:link href="https://ftbpro.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tech.minutemedia.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reporting Errors in Production: The Type/Stack Conflict</title>
-      <link>https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict/</link>
+      <link>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</link>
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict/</guid>
+      <guid>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
       <description>Lately, my team and I started reporting errors to Sentry. I hate to admit it, but only then did I notice that my errors aren’t telling me much at a glance.</description>
     </item>
     

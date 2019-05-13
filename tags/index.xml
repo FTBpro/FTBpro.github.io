@@ -2,121 +2,121 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on MinuteMedia Tech and Product Blog</title>
-    <link>https://ftbpro.github.io/tags/</link>
+    <link>https://tech.minutemedia.com/tags/</link>
     <description>Recent content in Tags on MinuteMedia Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
     <lastBuildDate>Mon, 22 Apr 2019 15:25:19 +0200</lastBuildDate>
     
-	<atom:link href="https://ftbpro.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tech.minutemedia.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Agile</title>
-      <link>https://ftbpro.github.io/tags/agile/</link>
+      <link>https://tech.minutemedia.com/tags/agile/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/agile/</guid>
+      <guid>https://tech.minutemedia.com/tags/agile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Cross Functional</title>
-      <link>https://ftbpro.github.io/tags/cross-functional/</link>
+      <link>https://tech.minutemedia.com/tags/cross-functional/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/cross-functional/</guid>
+      <guid>https://tech.minutemedia.com/tags/cross-functional/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Design</title>
-      <link>https://ftbpro.github.io/tags/design/</link>
+      <link>https://tech.minutemedia.com/tags/design/</link>
       <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/design/</guid>
+      <guid>https://tech.minutemedia.com/tags/design/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Development</title>
-      <link>https://ftbpro.github.io/tags/development/</link>
+      <link>https://tech.minutemedia.com/tags/development/</link>
       <pubDate>Tue, 01 Mar 2016 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/development/</guid>
+      <guid>https://tech.minutemedia.com/tags/development/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Errors</title>
-      <link>https://ftbpro.github.io/tags/errors/</link>
+      <link>https://tech.minutemedia.com/tags/errors/</link>
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/errors/</guid>
+      <guid>https://tech.minutemedia.com/tags/errors/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Golang</title>
-      <link>https://ftbpro.github.io/tags/golang/</link>
+      <link>https://tech.minutemedia.com/tags/golang/</link>
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/golang/</guid>
+      <guid>https://tech.minutemedia.com/tags/golang/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Pods</title>
-      <link>https://ftbpro.github.io/tags/pods/</link>
+      <link>https://tech.minutemedia.com/tags/pods/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/pods/</guid>
+      <guid>https://tech.minutemedia.com/tags/pods/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Process</title>
-      <link>https://ftbpro.github.io/tags/process/</link>
+      <link>https://tech.minutemedia.com/tags/process/</link>
       <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/process/</guid>
+      <guid>https://tech.minutemedia.com/tags/process/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Scrum</title>
-      <link>https://ftbpro.github.io/tags/scrum/</link>
+      <link>https://tech.minutemedia.com/tags/scrum/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/scrum/</guid>
+      <guid>https://tech.minutemedia.com/tags/scrum/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Sentry</title>
-      <link>https://ftbpro.github.io/tags/sentry/</link>
+      <link>https://tech.minutemedia.com/tags/sentry/</link>
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/sentry/</guid>
+      <guid>https://tech.minutemedia.com/tags/sentry/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Teams</title>
-      <link>https://ftbpro.github.io/tags/teams/</link>
+      <link>https://tech.minutemedia.com/tags/teams/</link>
       <pubDate>Mon, 22 Apr 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/teams/</guid>
+      <guid>https://tech.minutemedia.com/tags/teams/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tools</title>
-      <link>https://ftbpro.github.io/tags/tools/</link>
+      <link>https://tech.minutemedia.com/tags/tools/</link>
       <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
-      <guid>https://ftbpro.github.io/tags/tools/</guid>
+      <guid>https://tech.minutemedia.com/tags/tools/</guid>
       <description></description>
     </item>
     

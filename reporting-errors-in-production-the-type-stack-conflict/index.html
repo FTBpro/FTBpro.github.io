@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head><meta charset="utf-8">
-<meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 <meta content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace" name="description">
 
 
-<link rel="canonical" href="https://ftbpro.github.io/reporting-errors-in-production-the-type-stack-conflict">
+<link rel="canonical" href="https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict">
 
 <meta name="generator" content="Hugo 0.54.0" />
 
@@ -38,7 +37,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
     <div class="container pr-0">
         
-        <a class="navbar-brand" href="https://ftbpro.github.io//">
+        <a class="navbar-brand" href="https://tech.minutemedia.com//">
 
             
             <img src="/images/logo-secondary.png" alt="logo">
@@ -82,13 +81,13 @@
     <p>Share</p>
     <ul>
         <li class="ml-1 mr-1">
-        <a target="_blank" href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20Type%2fStack%20Conflict&url=https%3a%2f%2fftbpro.github.io%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20Type%2fStack%20Conflict&url=https%3a%2f%2ftech.minutemedia.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
         <i class="fab fa-twitter"></i>
         </a>
         </li>
         
         <li class="ml-1 mr-1">
-        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2fftbpro.github.io%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2ftech.minutemedia.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
         <i class="fab fa-facebook-f"></i>
         </a>
         </li>
@@ -443,6 +442,19 @@ func ReportError(err error) {
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
     
 <script src="/js/techblog.min.bf4ac0cbcff485fae275c79004c52498.js" ></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-23669758-28', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
 
         </div>
     </body>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta content="I’m having more fun programming with static typed languages and I think I know why." name="description">
+
+
+<link rel="canonical" href="https://tech.minutemedia.com/dynamic-ducks-vs-static-gophers">
+
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="icon" href="/images/mm-favicon.png">
+
+<title>Dynamic Ducks vs. Static Gophers | MinuteMedia Tech and Product Blog</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.min.25a917af25cb37e7d7ab06394211e250.css">
+
+<meta property="og:title" content="Dynamic Ducks vs. Static Gophers"/>
+<meta property="og:description" content="I’m having more fun programming with static typed languages and I think I know why."/>
+<meta property="og:type" content="article"/>
+
+<meta property="og:image" content="https://images2.minutemediacdn.com/image/upload/c_fill,h_500,w_825/techblog/david-di-veroli-2RMWPwYMZ84-unsplash.jpg"/>                       
+
+
+    </head>
+    <body>
+        <div class="blog-wrapper">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://tech.minutemedia.com//">
+
+            
+            <img src="/images/logo-secondary.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.minutemedia.com/careers">Careers</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.minutemedia.com/about">About Us</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">
+            <div class="container blog-main-content__wrapper">
+    <div class="main-content">
+        
+        <div class="container  pagewrap">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share">
+    <p>Share</p>
+    <ul>
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Dynamic%20Ducks%20vs.%20Static%20Gophers&url=https%3a%2f%2ftech.minutemedia.com%2fdynamic-ducks-vs-static-gophers" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+        <i class="fab fa-twitter"></i>
+        </a>
+        </li>
+        
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2ftech.minutemedia.com%2fdynamic-ducks-vs-static-gophers" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        </li>
+        
+    </ul>
+
+    
+</div></div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        
+                        <h1 class="posttitle">Dynamic Ducks vs. Static Gophers</h1> 
+                        	
+                        
+                        <div class="post-top-meta">
+<div class="author-thumb__box">
+    <img class="author-thumb" src='https://images2.minutemediacdn.com/image/upload/ar_1:1,c_fill,g_auto,h_200,w_200/techblog/dror.jpg' alt='Dror Nir'>
+</div>
+
+<div >
+    <a target="_blank" class="link-dark">Dror Nir</a><br>
+    <span class="author-description">
+        
+        <i class="far fa-star"></i>
+        Jul 2, 2019
+        <i class="far fa-clock clock"></i>
+        5 min read
+    </span>					
+</div></div>			
+                                                
+                    </div>
+
+                    
+                    
+                        <img class="featured-image img-fluid" src="https://images2.minutemediacdn.com/image/upload/c_fill,h_500,w_825/techblog/david-di-veroli-2RMWPwYMZ84-unsplash.jpg" alt="thumbnail for this post">
+                    
+                    
+                    
+                    
+                    <div class="article-post">
+                        
+
+<p>Until recently, I have professionally worked only with Ruby and Javascript. It’s only been about three years since I got my first programming job. I used these languages because that’s what the code was already written in, as it is with most of the starting web companies out there. But it’s been a while since the company started, and as the company grows, we needed a static typed language for our backend.</p>
+
+<p>Dynamic typed languages have drawbacks that are now widely discussed around the web. After a certain point we really felt the absence of types in ruby, so we are moving our core logic to Go services. This is my first experience working on a full scale web backend in a statically typed language. It’s a great experience for me and I hope I can convince you to make a similar move in your own work.</p>
+
+<h2 id="starting-to-explore">Starting to Explore</h2>
+
+<p>The problem, simplified, is this - we had accumulated some code debt in our RoR application, and we wanted to disentangle some of the spaghetti before migrating to Go.</p>
+
+<p>We started by extracting BL to plain ruby. We did it so we can write classes that capture the high level logic of the system. Naturally, these classes didn’t have Rails magic. Therefore, we avoided a major problem known to RoR developers: Classes that inherit from a Rails class are loaded at runtime with dozens of methods, so you need to memorize most of the api of a class. But there’s just too much to memorize. Can I be sure a certain method doesn’t access the <code>params</code> global variable under the hood? Can the object be serialized as an HTML form, or is it just a plain struct?
+The answers were in the code and the Rails documentation, no doubt. But the code was hard to reason about. A single Rails object can implement a huge amount of methods, and there’s no automatic way to know what an object implements or not.</p>
+
+<p>Unless you document it. And as I’ve learned, they best way to document your code is using tests. Simple tests can add context and meaning to what you’re building. However, covering a RoR app with tests might not be as simple as it seems at the start.</p>
+
+<h2 id="a-clash-of-kings-duck-type-testing-vs-ror">A Clash of Kings: Duck Type Testing vs. RoR</h2>
+
+<p>POODR has a chapter describing how to write interfaces and tests. If you’re writing ruby and you haven’t read POODR it’s fine. I forgive you, but go and read it now. It’s basically the ruby bible.
+Most of the tests are pretty straight forward: A certain object is required to implement a certain interface, so you</p>
+
+<ol>
+<li>Write a test that checks if your input implements the required interface</li>
+<li>Write a mock that returns the correct types and values that would make sense to pass as input for your tested method</li>
+<li>Run the tested method with these mocks just to make sure the interface of your mock holds</li>
+<li>Add a test that makes sure your mock and the passed input match in interface</li>
+</ol>
+
+<p>It makes sense, but that’s a lot of manual work. Consider the massive API that is added to each class that can connect to a db and also be rendered (to multiple formats). You will never be able to cover all of these with tests. There was a genuine effort to cover some of the functionality that we used. And even if we completed it, we ended up with a lot of test code. And that’s where, to me, everything falls apart for dynamic types.</p>
+
+<p>The codebase is large. Therefore, a testing codebase is created. In dynamic typed languages the testing codebase is also large. So how do we solve it? More tests. It’s an infinite loop!</p>
+
+<figure>
+    <img src="https://images2.minutemediacdn.com/image/upload/w_875/techblog/dror-its-pointless-diagram.png"/> <figcaption>
+            <h4>Diagram of a lost cause</h4>
+        </figcaption>
+</figure>
+
+
+<p>This realization came to me after I was shown a youtube talk.</p>
+
+<h2 id="duck-type-testing-is-clerical-work">Duck type testing is clerical work</h2>
+
+<p>In his DBX conference talk, The Future of Programming, Bret Victor <a href="https://youtu.be/8pTEmbeENF4?t=232">told</a> an anecdote about a professor called <a href="https://en.wikipedia.org/wiki/John_von_Neumann">Von Neumann</a> who was furious about one of his students. The student was compiling a piece of code instead of just writing a program in plain binary. Von Neumann said “it was clerical work, and clerical work is for people”. This was the 60’s. Imagine someone writing a program bit by bit in 2019. It seems just reckless to be honest.</p>
+
+<p>We’ve come a long way since writing binary code directly, and the community is mostly toward using as many tools as possible in order to make programmers write less code. We’re willing to sacrifice thousands of machine hours in order to safely compile, build, and test a piece of code in order to save a few moments of clerical work of engineers.</p>
+
+<p>And that’s when I realized I don’t want to write in dynamic languages anymore. Types are simply a tool for us to reason about our own code. It’s not about performance or complying to some ISO. <strong>Types are there for me, as a programmer, to declare a set of rules that I want to be enforced, and let the computer validate me</strong> instead of me validating myself. Instead of creating tests, I let the compiler check those things for me.</p>
+
+<p>After a while, I was given an awesome opportunity to “own” a backend service. We’re developing most of the services in Go, which has static types and a lot of strict rules. As with most static typed languages, building a Go binary involves a lot of static checks and analysis to pass in order to finish. Go is a good fit for us because the Go and Ruby programming cultures both rely on duck typing, it’s just that Go statically validates it on build time.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Von Neumann got it wrong. Computers should also do clerical work, and leave the humane part of coding to us. If we had to write all the type tests, as we have tried in the ruby system, we would again collide with the immovable rock - it’s not humanly possible to maintain all the duck type tests in our RoR app.</p>
+
+<p>As programmers, I believe we should be the first to accept technological tools that delegate clerical work. One of the first such solutions is using a static typed language. Types have been there since the start of professional programming, and I think I know why.</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="/tags/beginner">beginner</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/backend">backend</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/golang">golang</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/ruby">ruby</a>
+                        </li>
+                        
+                        <li>
+                        <a href="/tags/rails">rails</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                    
+                        <a class="d-block col-md-6 text-lg-right" href="/scale-or-fail-the-story-behind-minute-medias-editor-redesign">Scale or Fail: The Story Behind Minute Media’s Editor Redesign &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright MinuteMedia - All rights reserved
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    
+<script src="/js/techblog.min.bf4ac0cbcff485fae275c79004c52498.js" ></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-23669758-28', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+        </div>
+    </body>
+</html>

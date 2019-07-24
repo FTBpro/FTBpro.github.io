@@ -3,6 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tech.minutemedia.com/dynamic-ducks-vs-static-gophers/</loc>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/soft-landing-in-a-new-job/</loc>
+    <lastmod>2019-06-11T11:17:14+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-startups/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/the-lost-chapter-to-making-your-pods-successful/</loc>
     <lastmod>2019-05-15T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -44,6 +72,27 @@
   </url>
   
   <url>
+    <loc>https://tech.minutemedia.com/tags/backend/</loc>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/beginner/</loc>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/content/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/tags/cross-functional/</loc>
     <lastmod>2019-05-15T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -52,7 +101,7 @@
   
   <url>
     <loc>https://tech.minutemedia.com/tags/design/</loc>
-    <lastmod>2018-10-08T18:55:29+02:00</lastmod>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -65,8 +114,8 @@
   </url>
   
   <url>
-    <loc>https://tech.minutemedia.com/authors/eddy/</loc>
-    <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <loc>https://tech.minutemedia.com/tags/editor/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -80,16 +129,37 @@
   
   <url>
     <loc>https://tech.minutemedia.com/tags/golang/</loc>
-    <lastmod>2019-04-09T22:25:19+02:00</lastmod>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/high-tech/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/job/</loc>
+    <lastmod>2019-06-11T11:17:14+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tech.minutemedia.com/</loc>
-    <lastmod>2019-05-15T15:25:19+02:00</lastmod>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/platform/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -101,7 +171,7 @@
   
   <url>
     <loc>https://tech.minutemedia.com/posts/</loc>
-    <lastmod>2019-05-15T15:25:19+02:00</lastmod>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -109,6 +179,41 @@
   <url>
     <loc>https://tech.minutemedia.com/tags/process/</loc>
     <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/publisher/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/rails/</loc>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/redesign/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/research/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/ruby/</loc>
+    <lastmod>2019-07-02T09:42:03+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -128,6 +233,20 @@
   </url>
   
   <url>
+    <loc>https://tech.minutemedia.com/tags/social/</loc>
+    <lastmod>2019-06-11T11:17:14+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/start-up/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/tags/</loc>
     <lastmod>2019-05-15T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -142,8 +261,43 @@
   </url>
   
   <url>
+    <loc>https://tech.minutemedia.com/tags/tech/</loc>
+    <lastmod>2019-06-11T11:17:14+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/tags/tools/</loc>
     <lastmod>2019-04-15T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/ui/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/ux/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/work/</loc>
+    <lastmod>2019-06-11T11:17:14+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/working-methods/</loc>
+    <lastmod>2019-06-11T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

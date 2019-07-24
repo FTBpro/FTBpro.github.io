@@ -7,10 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
-    <lastBuildDate>Wed, 15 May 2019 15:25:19 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jul 2019 09:42:03 +0000</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dynamic Ducks vs. Static Gophers</title>
+      <link>https://tech.minutemedia.com/dynamic-ducks-vs-static-gophers/</link>
+      <pubDate>Tue, 02 Jul 2019 09:42:03 +0000</pubDate>
+      
+      <guid>https://tech.minutemedia.com/dynamic-ducks-vs-static-gophers/</guid>
+      <description>Until recently, I have professionally worked only with Ruby and Javascript. It’s only been about three years since I got my first programming job. I used these languages because that’s what the code was already written in, as it is with most of the starting web companies out there.</description>
+    </item>
+    
+    <item>
+      <title>Scale or Fail: The Story Behind Minute Media’s Editor Redesign</title>
+      <link>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</link>
+      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</guid>
+      <description>Scale or Fail: The Story Behind Minute Media’s Editor Redesign In 2015, Minute Media released its Editor to more than 200 writers and 20 content managers.</description>
+    </item>
+    
+    <item>
+      <title>Soft landing in a new job</title>
+      <link>https://tech.minutemedia.com/soft-landing-in-a-new-job/</link>
+      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/soft-landing-in-a-new-job/</guid>
+      <description>The first thing I found out in 2019 was, that starting a new job as a senior developer was surprisingly difficult. The interviews are one thing, but when your first day finally arrives and you march in there wearing your senior developer hat, then it’s time to put your money where your mouth is.</description>
+    </item>
+    
+    <item>
+      <title>Welcome to Mars! A Beginner&#39;s Guide to startups</title>
+      <link>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-startups/</link>
+      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-startups/</guid>
+      <description>Welcome to Mars! A Beginners Guide to Hi-tech
+So, you got accepted to your dream job in a successful startup company. You passed about 6 interviews, a home assignment (in my case a design assignment), you signed an 11 page contract (in English of course) and now you are about to start working&amp;hellip;but wait - do you know what you are actually getting yourself in to?</description>
+    </item>
     
     <item>
       <title>The Lost Chapter to Making Your Pods Successful</title>
@@ -27,7 +64,7 @@
       <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/how-monorepo-is-helping-us-work-better/</guid>
-      <description>&lt;p&gt;As any other mature startup that is moving to its growth stage, we had to rebuild our infrastructure.&lt;/p&gt;</description>
+      <description>As any other mature startup that is moving to its growth stage, we had to rebuild our infrastructure. Our initial infrastructure was a Monolithic application in Ruby on Rails.</description>
     </item>
     
     <item>

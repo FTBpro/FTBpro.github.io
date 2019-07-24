@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>MinuteMedia - All rights reserved</copyright>
-    <lastBuildDate>Tue, 01 Mar 2016 15:25:19 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 15:25:19 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Welcome to Mars! A Beginner&#39;s Guide to startups</title>
+      <link>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-startups/</link>
+      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-startups/</guid>
+      <description>Welcome to Mars! A Beginners Guide to Hi-tech
+So, you got accepted to your dream job in a successful startup company. You passed about 6 interviews, a home assignment (in my case a design assignment), you signed an 11 page contract (in English of course) and now you are about to start working&amp;hellip;but wait - do you know what you are actually getting yourself in to?</description>
+    </item>
     
     <item>
       <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>

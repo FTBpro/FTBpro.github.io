@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beginner on MinuteMedia Tech and Product Blog</title>
+    <link>https://tech.minutemedia.com/tags/beginner/</link>
+    <description>Recent content in Beginner on MinuteMedia Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MinuteMedia - All rights reserved</copyright>
+    <lastBuildDate>Tue, 02 Jul 2019 09:42:03 +0000</lastBuildDate>
+    
+	<atom:link href="https://tech.minutemedia.com/tags/beginner/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Dynamic Ducks vs. Static Gophers</title>
+      <link>https://tech.minutemedia.com/dynamic-ducks-vs-static-gophers/</link>
+      <pubDate>Tue, 02 Jul 2019 09:42:03 +0000</pubDate>
+      
+      <guid>https://tech.minutemedia.com/dynamic-ducks-vs-static-gophers/</guid>
+      <description>Until recently, I have professionally worked only with Ruby and Javascript. It’s only been about three years since I got my first programming job. I used these languages because that’s what the code was already written in, as it is with most of the starting web companies out there.</description>
+    </item>
+    
+  </channel>
+</rss>

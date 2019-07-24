@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Platform on MinuteMedia Tech and Product Blog</title>
+    <link>https://tech.minutemedia.com/tags/platform/</link>
+    <description>Recent content in Platform on MinuteMedia Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>MinuteMedia - All rights reserved</copyright>
+    <lastBuildDate>Tue, 11 Jun 2019 15:25:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://tech.minutemedia.com/tags/platform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Scale or Fail: The Story Behind Minute Media’s Editor Redesign</title>
+      <link>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</link>
+      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</guid>
+      <description>Scale or Fail: The Story Behind Minute Media’s Editor Redesign In 2015, Minute Media released its Editor to more than 200 writers and 20 content managers.</description>
+    </item>
+    
+  </channel>
+</rss>

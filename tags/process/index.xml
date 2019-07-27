@@ -13,12 +13,13 @@
     
     
     <item>
-      <title>How Monorepo is helping us work better</title>
+      <title>How Using a Monorepo is Helping Us Work Better</title>
       <link>https://tech.minutemedia.com/how-monorepo-is-helping-us-work-better/</link>
       <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/how-monorepo-is-helping-us-work-better/</guid>
-      <description>As any other mature startup that is moving to its growth stage, we had to rebuild our infrastructure. Our initial infrastructure was a Monolithic application in Ruby on Rails.</description>
+      <description>As any other mature startup moving to its growth stage, Minute Media had to rebuild its infrastructure.
+Our initial infrastructure was a Monolithic application in Ruby on Rails.</description>
     </item>
     
     <item>

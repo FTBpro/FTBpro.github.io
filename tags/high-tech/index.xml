@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>High Tech on MinuteMedia Tech and Product Blog</title>
+    <title>High Tech on Minute Media Tech and Product Blog</title>
     <link>https://tech.minutemedia.com/tags/high-tech/</link>
-    <description>Recent content in High Tech on MinuteMedia Tech and Product Blog</description>
+    <description>Recent content in High Tech on Minute Media Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>MinuteMedia - All rights reserved</copyright>
+    <copyright>Minute Media - All rights reserved</copyright>
     <lastBuildDate>Tue, 11 Jun 2019 15:25:19 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/tags/high-tech/index.xml" rel="self" type="application/rss+xml" />

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Process on MinuteMedia Tech and Product Blog</title>
+    <title>Process on Minute Media Tech and Product Blog</title>
     <link>https://tech.minutemedia.com/tags/process/</link>
-    <description>Recent content in Process on MinuteMedia Tech and Product Blog</description>
+    <description>Recent content in Process on Minute Media Tech and Product Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>MinuteMedia - All rights reserved</copyright>
+    <copyright>Minute Media - All rights reserved</copyright>
     <lastBuildDate>Tue, 16 Apr 2019 16:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/tags/process/index.xml" rel="self" type="application/rss+xml" />

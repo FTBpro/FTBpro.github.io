@@ -73,8 +73,8 @@ So, you got accepted to your dream job in a successful startup company. You pass
       <pubDate>Mon, 15 Apr 2019 16:00:00 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/how-monorepo-is-helping-us-work-better/</guid>
-      <description>As any other mature startup moving to its growth stage, Minute Media had to rebuild its infrastructure.
-Our initial infrastructure was a Monolithic application in Ruby on Rails.</description>
+      <description>Similar to many other mature startups moving towards their growth stage, Minute Media had to rebuild some of its infrastructure.
+Our initial infrastructure was a Monolithic application in Ruby on Rails, but we realized we needed to explore other options as our company and team grew.</description>
     </item>
     
     <item>
@@ -83,7 +83,7 @@ Our initial infrastructure was a Monolithic application in Ruby on Rails.</descr
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
-      <description>Lately, my team and I started reporting errors to Sentry. I hate to admit it, but only then did I notice that my errors aren’t telling me much at a glance.</description>
+      <description>Lately, my team and I have started reporting errors to Sentry, and I hate to admit it, but only then did I notice that my errors weren’t telling me much.</description>
     </item>
     
   </channel>

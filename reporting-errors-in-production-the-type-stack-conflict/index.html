@@ -134,37 +134,40 @@
                     <div class="article-post">
                         
 
-<p>Lately, my team and I started reporting errors to Sentry. I hate to admit it, but only then did I notice that my errors aren’t telling me much at a glance. I either got my custom error types, or a relevant stack trace, not both.</p>
+<p>Lately, my team and I have started reporting errors to Sentry, and  I hate to admit it, but only then did I notice that my errors  weren’t telling me much.. I would either get my custom error types, or a relevant stack trace, but not both.</p>
 
-<p>In this post I’ll go over these concerns and suggest simple ways to have both. After all, the main reason we have errors is for us to have something to report on when our application fails, isn’t it?</p>
+<p>In this post I’ll go over these concerns and suggest simple ways to get  both information types. After all, the main reason we have errors is for us to have something to report on when our application fails, isn’t it?</p>
 
-<h2 id="what-reasonable-reporting-should-look-like">What reasonable reporting should look like</h2>
+<h2 id="what-reasonable-reporting-should-look-like">What Reasonable Reporting Should Look Like</h2>
 
-<p>First let’s review some of the main concerns when handling errors in production:</p>
+<p>First, let’s review some of the main concerns when handling errors in production:</p>
 
 <p><em><strong>The Message</strong></em> should be composed of all the messages in the error chain.</p>
 
 <p><em><strong>The Stack Trace</strong></em> should be from where the error was created, not from where it was reported.</p>
 
-<p><strong><em>The Type</em></strong> is preferably a name that means something to us. Take for example this mock Sentry interface:</p>
+<p><strong><em>The Type</em></strong> should preferably be a name that means something to us. Take for example this mock Sentry interface:</p>
 
-<p><img src="/images/sentry.png" alt="sentry mock" /><br />
-<code>image</code>: Sentry errors interface mock</p>
+<figure>
+    <img src="/images/sentry.png"/> <figcaption>
+            <h4>Sentry errors interface mock</h4>
+        </figcaption>
+</figure>
 
-<p><code>sql.updateArticleError</code> is the only name which means something to us. All other types belong to some framework which created them.</p>
 
-<p>To understand how we can fill these requirements, we first need to talk about a popular player in this field: <code>pkg/errors</code>.</p>
+<p>In the above example, <code>sql.updateArticleError</code> is the only name which means something to us. All of the other types belong to the framework which created them.</p>
+
+<p>To understand how we can fill these requirements, we first need to talk about a popular player in this field, <code>pkg/errors</code>.</p>
 
 <h2 id="pkg-errors">pkg/errors</h2>
 
-<p><a href="https://github.com/pkg/errors"><code>pkg/errors</code></a>, created in 2016 by Dave Chaney, is a replacement for the standard error package.
-It provides a great functionality for wrapping and unwrapping an error. You can achieve this by these two main functions:
+<p><a href="https://github.com/pkg/errors"><code>pkg/errors</code></a>, created in 2016 by Dave Chaney, is a replacement for the standard error package. It provides great functionality for wrapping and unwrapping an error, which  you can achieve  by these two main functions:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#75715e">// Wrap annotates cause with a message.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Wrap</span>(<span style="color:#a6e22e">cause</span> <span style="color:#66d9ef">error</span>, <span style="color:#a6e22e">message</span> <span style="color:#66d9ef">string</span>) <span style="color:#66d9ef">error</span> {}
 
 <span style="color:#75715e">// Cause unwraps an annotated error.
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">Cause</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">error</span> {}</code></pre></div>
-Not only that, it also provides a stack trace for the errors it creates. Just cast the err to <code>stacker</code> and get the stack trace:
+Not only that, it also provides a stack trace for the errors it creates. To get the stack trace, just cast the err to <code>stacker</code>:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">stacker</span> <span style="color:#66d9ef">interface</span> {
     <span style="color:#a6e22e">StackTrace</span>() <span style="color:#a6e22e">pkgErrors</span>.<span style="color:#a6e22e">StackTrace</span>
 }
@@ -181,18 +184,22 @@ Not only that, it also provides a stack trace for the errors it creates. Just ca
 		<span style="color:#a6e22e">fmt</span>.<span style="color:#a6e22e">Printf</span>(<span style="color:#e6db74">&#34;original stack trace:\n%+v\n\n&#34;</span>, <span style="color:#a6e22e">origStack</span>)
 	}
 }</code></pre></div>
-Thanks to this package, the message we will see in Sentry will be composed of all the messages during the chain. Unfortunately, if we want the relevant stack trace and our own custom type, we encounter a small issue.</p>
+Thanks to this package, the message we see in Sentry will be composed of all the messages during the chain. Unfortunately, if we want the relevant stack trace and our own custom type, we will encounter a small issue.</p>
 
 <h2 id="the-stacktrace-type-conflict">The StackTrace/Type conflict</h2>
 
 <p>Sentry unwraps the error before actually reporting it. You can see in the <a href="https://github.com/getsentry/raven-go/blob/master/client.go#L747"><code>CaptureError</code></a> implementation, that it uses <code>Cause</code> on the error reported.</p>
 
-<p>The base of the conflict lies in the fact that the <strong>same</strong> error is used both for the type and for the stack trace. We can easily have a custom type <strong>or</strong> a relevant stack trace. Not both.</p>
+<p>The base of the conflict lies in the fact that the <strong>same</strong> error is used both for the type and for the stack trace. We can easily have a custom type <strong>or</strong> a relevant stack trace, but  not both.</p>
 
 <p>The next pseudo flow gives us a better idea of what’s happening:</p>
 
-<p><img src="/images/flow.png" alt="flow" /><br />
-image: <code>publishing.Service</code> is calling <code>articlesRepository</code> to update an article, which is calling its dependency, an external db handler.</p>
+<figure>
+    <img src="/images/flow.png"/> <figcaption>
+            <h4>publishing.Service is calling articlesRepository to update an article, which is calling its dependency, an external db handler.</h4>
+        </figcaption>
+</figure>
+
 
 <p>Imagine that <code>extsql.db</code> returns an error. How should we treat it in our <code>articlesRepository</code>?</p>
 
@@ -203,7 +210,7 @@ image: <code>publishing.Service</code> is calling <code>articlesRepository</code
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Exec</span>(<span style="color:#f92672">...</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
       <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pkgErrors</span>.<span style="color:#a6e22e">Errorf</span>(<span style="color:#e6db74">&#34;articlesRepository.Update: %s&#34;</span>, <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">Error</span>())
 }</code></pre></div>
-In this case, we will have the stack trace from here, where it was created, but the type will be meaningless to us. This is because it’s the type of the inner struct of <code>pkg/errors</code>.</p>
+In this case, we will have the stack trace from here, which is where it was created, but the type will be meaningless to us. This is because it’s the type of the inner struct of <code>pkg/errors</code>.</p>
 
 <h3 id="2-wrap-a-custom-error">2) Wrap a custom error</h3>
 
@@ -219,27 +226,28 @@ In this case, we will have the stack trace from here, where it was created, but 
 <p>We can wrap it like this:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pkgErrors</span>.<span style="color:#a6e22e">Wrapf</span>(<span style="color:#a6e22e">updateArticleError</span>, <span style="color:#e6db74">&#34;db failed exec: %s&#34;</span>, <span style="color:#a6e22e">err</span>)
-}</code></pre></div>
-Great, so we will see <code>sql.articlesRepositoryError</code> as the type. Yes, but unfortunately we will have an irrelevant stack trace. This is because our error doesn’t implement the <code>stacker</code> interface.</p>
+}</code></pre></div></p>
+
+<p>As a result, we will see <code>sql.articlesRepositoryError</code> as the type,but unfortunately we will have an irrelevant stack trace. This is because our error doesn’t implement the <code>stacker</code> interface.</p>
 
 <h3 id="3-wrap-the-error-from-the-db">3) Wrap the error from the db</h3>
 
-<p>What’s even worse, is the case when we wrap an external error, which may not follow <code>pkg/errors</code> practice:
+<p>What’s even worse, is when we wrap an external error, which may not follow <code>pkg/errors</code> practice:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Exec</span>(<span style="color:#f92672">...</span>); <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">pkgErrors</span>.<span style="color:#a6e22e">Wrap</span>(<span style="color:#a6e22e">err</span>, <span style="color:#e6db74">&#34;articlesRepository.Update&#34;</span>)
-}</code></pre></div>
-If the external sql supports <code>pkg/errors</code> and we don&rsquo;t interested in our own type, it might be ok and we&rsquo;ll want to do just that. But in some other cases, this error might just be <code>errors.String</code>. We won’t have neither a stack trace, nor a meaningful type.</p>
+}</code></pre></div></p>
 
-<p>So what’s the problem? Let’s just implement this <code>stacker</code> interface in all of our custom types.<br />
-No no, don’t worry, there is always another solution - compromise&hellip;</p>
+<p>If the external sql supports <code>pkg/errors</code> and we aren’t interested in our own type, it might be ok and we’ll want to do just that. But in some other cases, this error might just be <code>errors.String</code>. We won’t have  either a stack trace,or a meaningful type.
+So what’s the solution if we don’t want to  just implement this
+ <code>stacker</code> interface in all of our custom types? Compromise…</p>
 
-<h3 id="compromise-1-keep-the-stack-simple-complicate-the-type">Compromise 1: keep the stack simple, complicate the type</h3>
+<h3 id="compromise-1-keep-the-stack-simple-complicate-the-type">Compromise 1: Keep the Stack Simple, Complicate the Type</h3>
 
-<p>How will you make your custom error implement the <code>stacker</code> interface, without actually implementing it? You guessed it, you can use embedded struct.</p>
+<p>How will you make your custom error implement the <code>stacker</code> interface without actually implementing it? You can use embedded struct.</p>
 
 <p>If our custom error is a struct embedding <code>stacker</code>, we can use it as the <strong>origin</strong> error without worries.</p>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">sql</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">sql</span>
 
 <span style="color:#75715e">// This is our custom type sql.updateArticleError, which embeds stacker
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">articlesRepositoryError</span> <span style="color:#66d9ef">struct</span> {
@@ -265,12 +273,14 @@ No no, don’t worry, there is always another solution - compromise&hellip;</p>
 	<span style="color:#75715e">// do other stuff
 </span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 }</code></pre></div>
-This way we will get our own type <code>sql.articlesRepositoryError</code> and the stack trace. We won’t need to do any extra work on the reporting side. This is also thanks to Sentry&rsquo;s support of the <code>stacker</code> interface.</p>
 
-<h3 id="compromise-2-keep-the-type-simple-put-extra-work-for-the-stack-trace">Compromise 2: keep the type simple, put extra work for the stack trace</h3>
+<p>This way we will get our own type <code>sql.articlesRepositoryError</code> nd the stack trace. We won’t need to do any extra work on the reporting side, thanks to Sentry’s support of the <code>stacker</code> interface.</p>
 
-<p>Ok, so not everybody likes to embed a struct on a daily basis. Let’s stick with the type we defined earlier and just wrap it:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">sql</span>
+<h3 id="compromise-2-keep-the-type-simple-put-extra-work-for-the-stack-trace">Compromise 2: Keep the Type Simple, Put Extra Work For the Stack Trace</h3>
+
+<p>Since not everyone  likes to embed a struct on a daily basis, let’s stick with the type we defined earlier and just wrap it:</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">sql</span>
 
 <span style="color:#66d9ef">type</span> <span style="color:#a6e22e">articlesRepositoryError</span> <span style="color:#66d9ef">string</span>
 <span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">e</span> <span style="color:#a6e22e">articlesRepositoryError</span>) <span style="color:#a6e22e">Error</span>() <span style="color:#66d9ef">string</span> { <span style="color:#66d9ef">return</span> string(<span style="color:#a6e22e">e</span>) }
@@ -287,9 +297,9 @@ This way we will get our own type <code>sql.articlesRepositoryError</code> and t
 	<span style="color:#75715e">// do other stuff
 </span><span style="color:#75715e"></span>	<span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nil</span>
 }</code></pre></div>
-When this error is reported, we will see our type <code>sql.articlesRepositoryError</code>, but not the relevant stack trace, since <code>updateArticleErr</code> doesn&rsquo;t implement <code>stacker</code>. The compromise will be to just report the stack as an extra parameter. Instead of the main view, we will see it in the ‘additional data’ section in Sentry.</p>
+When this error is reported, we will see our type <code>sql.articlesRepositoryError</code>, but not the relevant stack trace, since <code>updateArticleErr</code> doesn’t implement <code>stacker</code>. The compromise will be to report the stack as an extra parameter. Instead of the main view, we will see it in the ‘additional data’ section in Sentry.
+We will get the deepest stack trace we can find by casting the errors in the chain to stacker:</p>
 
-<p>We will get the deepest stack trace we could find, by casting the errors in the chain to stacker:
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">causer</span> <span style="color:#66d9ef">interface</span> {
 	<span style="color:#a6e22e">Cause</span>() <span style="color:#66d9ef">error</span>
 }
@@ -311,7 +321,9 @@ When this error is reported, we will see our type <code>sql.articlesRepositoryEr
 
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">stackTrace</span>
 }</code></pre></div>
-After you get the stackTrace, you can pass it to Sentry as a slice of strings. Sentry handles it pretty well.
+
+<p>After you get the stack trace, you can pass it to Sentry as a slice of strings. Sentry can handle it pretty well.</p>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">stackTraceStrings</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) []<span style="color:#66d9ef">string</span> {
 	<span style="color:#a6e22e">toRet</span> <span style="color:#f92672">:=</span> []<span style="color:#66d9ef">string</span>{}
 	<span style="color:#66d9ef">for</span> <span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">frame</span> <span style="color:#f92672">:=</span> <span style="color:#66d9ef">range</span> <span style="color:#a6e22e">deepestStackTrace</span>(<span style="color:#a6e22e">err</span>) {
@@ -320,14 +332,18 @@ After you get the stackTrace, you can pass it to Sentry as a slice of strings. S
 
 	<span style="color:#66d9ef">return</span> <span style="color:#a6e22e">toRet</span>
 }</code></pre></div>
-A small improvement is to add this stack trace only in cases the original error isn’t a stacker:
+
+<p>A small improvement is to add this stack trace only in the cases where the original error isn’t a stacker:</p>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">shouldAddStack</span>(<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>) <span style="color:#66d9ef">bool</span> {
 	<span style="color:#a6e22e">cause</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">pkgErrors</span>.<span style="color:#a6e22e">Cause</span>(<span style="color:#a6e22e">err</span>)
 	<span style="color:#a6e22e">_</span>, <span style="color:#a6e22e">ok</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">cause</span>.(<span style="color:#a6e22e">stacker</span>)
 	<span style="color:#66d9ef">return</span> !<span style="color:#a6e22e">ok</span>
 }</code></pre></div>
-Putting it all together, our Sentry abstraction will look like this:
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">extra</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
+
+<p>When putting it all together, our Sentry abstraction will look like this:</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">extra</span> <span style="color:#66d9ef">map</span>[<span style="color:#66d9ef">string</span>]<span style="color:#66d9ef">interface</span>{}
 
 <span style="color:#75715e">// implements sentry.Interface
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">func</span> (<span style="color:#a6e22e">e</span> <span style="color:#a6e22e">extra</span>) <span style="color:#a6e22e">Class</span>() <span style="color:#66d9ef">string</span> {
@@ -343,15 +359,16 @@ Putting it all together, our Sentry abstraction will look like this:
 	<span style="color:#a6e22e">client</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">raven</span>.<span style="color:#a6e22e">New</span>(<span style="color:#e6db74">&#34;some@dsn&#34;</span>)
 	<span style="color:#a6e22e">client</span>.<span style="color:#a6e22e">CaptureError</span>(<span style="color:#a6e22e">err</span>, <span style="color:#66d9ef">nil</span>, <span style="color:#a6e22e">extra</span>(<span style="color:#a6e22e">params</span>))
 }</code></pre></div>
-It seams like manually adding the stack trace is a lot of work, but remember, it is done once. So it might be a better solution than doing an extra work on every error type.</p>
+It seems like manually adding the stack trace is a lot of work, but remember, it is only done once so it might be a better solution than doing extra work on every error type.</p>
 
-<h2 id="what-s-next">What’s next::</h2>
+<h2 id="what-s-next">What’s next:</h2>
 
-<p>We just saw, what I believe is, the very basic concerns when it comes to reporting our errors. In the next post, we’ll see how we can wrap an error of a dependency, but still keep our custom error type. Not very surprisingly, it can be easily done using a simple custom errors package.</p>
+<p>What we just saw, in my opinion, are very basic concerns when it comes to reporting  errors.
+In the next post, we’ll see how we can wrap an error of a dependency, but still keep our custom error type. Not surprisingly, it can easily be done using a simple custom errors package.</p>
 
-<p>Regarding the “deepest stack trace”, it’s not a new idea. If it is implemented in Sentry, it will resolve this whole conflict issue :)</p>
+<p>Regarding the “deepest stack trace” it’s not a new idea. If it is implemented in Sentry, it will resolve the whole conflict issue.</p>
 
-<p>Meanwhile, the <a href="https://go.googlesource.com/proposal/+/master/design/29934-error-values.md">Go 2.0 errors inspection proposal</a>, which just came out a couple of months ago, shares some of <code>pkg/errors</code> ideas. Very interesting to read and exciting to see what will happen with errors in Go in the future.</p>
+<p>Meanwhile, the <a href="https://go.googlesource.com/proposal/+/master/design/29934-error-values.md">Go 2.0 errors inspection proposal</a>, which just came out a couple of months ago, shares some <code>pkg/errors</code> ideas. It is  very interesting to read and I’m excited to see what will happen with errors in Go in the future.</p>
 
                     </div>
                     

@@ -27,7 +27,7 @@
       <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
-      <description>Lately, my team and I started reporting errors to Sentry. I hate to admit it, but only then did I notice that my errors aren’t telling me much at a glance.</description>
+      <description>Lately, my team and I have started reporting errors to Sentry, and I hate to admit it, but only then did I notice that my errors weren’t telling me much.</description>
     </item>
     
   </channel>

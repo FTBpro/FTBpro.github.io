@@ -118,7 +118,7 @@
         <i class="far fa-star"></i>
         Apr 15, 2019
         <i class="far fa-clock clock"></i>
-        4 min read
+        5 min read
     </span>					
 </div></div>			
                                                 
@@ -134,33 +134,33 @@
                     <div class="article-post">
                         
 
-<p>As any other mature startup moving to its growth stage, Minute Media  had to rebuild its  infrastructure.</p>
+<p>Similar to many other mature startups moving towards their  growth stage, Minute Media had to rebuild some of its infrastructure.</p>
 
-<p>Our initial infrastructure was a Monolithic application in Ruby on Rails. Regardless of the technology we chose, the goal was to create tools and company-wide standards. So we  set out to explore.</p>
+<p>Our initial infrastructure was a Monolithic application in Ruby on Rails, but we realized we needed to explore other options as our company and team grew. As we set out to explore more options, our  goal was to create tools and company-wide standards that would help facilitate open conversation and company growth&hellip;</p>
 
-<p>Our teams work  in a cross-functional organization with clear and sometimes separate business goals. During our exploration, each team ventured out on its own, testing technologies like Node and Go. Few weeks in, we realized we had some communication problems. When we had the opportunity to share our work, we noticed similar technical and design problems arise across teams.</p>
+<p>In our company structure,  our teams work  in  cross-functional organization with clear and sometimes separate business goals. During our exploration, each team ventured out on its own, testing technologies like Node and Go. A  few weeks in, we realized we had some communication problems. When we had the opportunity to share our work, we noticed similar technical and design problems arose across teams.</p>
 
-<p>To avoid siloing the teams, solving similar technical problems and doing the same work twice, we tried our new development efforts in a monorepo.</p>
+<p>To avoid duplicating efforts across multiple teams we tried our new development efforts in a monorepo.</p>
 
 <h4 id="what-is-a-monorepo">What is a monorepo?</h4>
 
-<p>A monorepo is, simply put, a monolithic repository. The idea is to keep all, or most of the projects in the company, in one single repository. The concept is not new and has been in practice for 10 years. Most notably, it’s being used by large companies and corporations such as  Google, Facebook, Twitter, Uber.</p>
+<p>A monorepo is, simply put, a monolithic repository. The idea is to keep all, or a majority of, the projects in the company, in one single repository. This  concept is not new and has been in practice for 10 years,   most notably, it’s being used by large companies and corporations such as Google, Facebook, Twitter, and Uber.</p>
 
-<p>After using monmorepo for over a year, I would like to share some of the benefits and lessons we have learned. .</p>
+<p>After using monorepo for over a year, I would like to share some of the benefits and lessons we have learned:</p>
 
 <h4 id="introducing-transparency">Introducing Transparency</h4>
 
-<p>All our codebase is available  to  all team members, but when projects each had their own repos, we rarely found ourselves reviewing the other team’s code.</p>
+<p>Our codebase is available  to all team members, but when projects each had their own repos, we rarely found ourselves reviewing the other team’s code.</p>
 
-<p>Now, we  are enabling all team members to review the entire code base. Most of the code is owned by separate teams, so if you are interested in seeing what other teams are doing, you can take a look at  the pull request.</p>
+<p>Now, we  can  enable  all team members to review the entire code base. Most of the code is still owned by separate teams, but  if someone is  interested in seeing what other teams are doing, all they have to do is take a look at the pull request.</p>
 
-<p> The barrier to doing so is extremely low, since it is just another PR in the repository . In fact,  team members regularly find themselves browsing other teams’ PRs.</p>
+<p>The barrier to doing so is extremely low, since it is just another PR in the repository . In fact, team members regularly find themselves browsing other teams’ PRs.</p>
 
-<p>This state generates a subconscious thought to create better and more readable code, since your code is in the open, similar to the open source effect.</p>
+<p>This process  has led us to subconsciously create better and more readable code, since all of the  code is in the open to all teams, similar to the open source effect.</p>
 
 <h4 id="building-alignment">Building Alignment</h4>
 
-<p>When everything is visible and accessible in a single repo, it is much easier to agree and enforce standards. Every team has its own special standards, but we are trying to align ourselves better . All standards are tested and implemented in each respective team. Once proven useful, all teams move forward and the new standard is implemented across the entire monorepo. Standards we recently implemented:</p>
+<p>When everything is visible and accessible in a single repo, it is much easier to agree and re-enforce standards. Previously,  every team had  its own specific  standards, but as we better aligned ourselves , .   we came up with a process for company-wide standards. In this process, all standards are tested and implemented in each respective team,  and   once proven useful, all teams move forward and the new standard is implemented across the entire monorepo. Standards we have recently implemented are:</p>
 
 <ul>
 <li>Directory structure for restful services in Go</li>
@@ -173,29 +173,28 @@
 
 <h4 id="sharing-ideas">Sharing Ideas</h4>
 
-<p>We are seeing better cross system architectural designs. This was very hard to spot before, especially for services which  are in separate repositories. Similar functionality is easy to spot and extract. Building an in-house framework to support and increase delivery velocity use it in one service and then apply it. Using one codebase allows participants to spot new or similar ideas. For example, you can use a service that categorises videos according to the transcript, or one that  categorises  news articles as well.</p>
+<p>Since switching to monmorepo,  we are seeing better cross system architectural designs. This was very hard to spot before, especially for services which  are in separate repositories, but now  similar functionality is easy to spot and extract. Building an in-house framework to support and increase delivery velocity, we  use the repo  in one service and then apply it. Using one codebase allows participants to spot new or similar ideas. For example, you can use a service that categorizes videos according to the transcript, or one that categorizes news articles as well.</p>
 
 <h4 id="integrating-early">Integrating Early</h4>
 
-<p>Since the whole system is in one repo, writing integration tests and launching the entire system in docker is a breeze. Today, Minute Media  are able to detect integration problems extremely early.</p>
+<p>Since the whole system is in one repo, writing integration tests and launching the entire system in Docker is a breeze. Today, Minute Media  is  able to detect integration problems extremely early.</p>
 
-<p>Using docker compose, you can spin up the entire end to end system on your laptop. This enables more elaborate features, like spinning ad hoc QA environments or demos for clients.</p>
+<p>Using Docker Compose, you can spin up the entire end-to-end system on your laptop. This enables more elaborate features, like spinning ad hoc QA environments or demos for clients.</p>
 
 <h4 id="allowing-for-simpler-maintenance">Allowing for Simpler Maintenance</h4>
 
-<p>In addition, language upgrades and security patches are applied across all the code at once. Maintaining and updating external dependencies is much simpler, and more accessible than before.</p>
+<p>In addition, language upgrades and security patches are applied across all of the code at once. Maintaining and updating external dependencies is much simpler, and more accessible than before.</p>
 
-<p>Upgrading from Go 1.10 to 1.11 was done by a single developer over a period of 2-3 days, on 20 different services.</p>
+<p>For example, upgrading from Go 1.10 to 1.11 was done by a single developer over a period of two to three  days, on 20 different services.</p>
 
 <h4 id="smoothing-corners">Smoothing Corners</h4>
 
 <p>Like everything else in software development, a monorepo requires some discipline. Just like sharing ideas is easy, so is breaking service encapsulation.</p>
 
-<p>Not everybody feels comfortable sharing all the code all the time. Sometimes sharing creates discussion, where there should just be a simple decision.</p>
+<p>Not everybody feels comfortable sharing all of the code all the time and  sometimes sharing creates more complicated discussions, where there should just be  one simple decision.</p>
 
-<p>Furthermore, once the code grows it becomes slower to push/pull requests - which is why we are working towards better integration.</p>
-
-<p>We are still pretty much at the beginning of this experiment. It’s obvious there are many things we need to add to our tool box:</p>
+<p>Furthermore, once the code grows it becomes slower to push/pull requests - which is why we are working towards better integration.
+We are still at the beginning of this experiment, and    it’s obvious that there are many things we still need to add to our tool box, such as:</p>
 
 <ul>
 <li>List of rules for monorepo</li>
@@ -207,9 +206,9 @@
 
 <h4 id="summary">Summary</h4>
 
-<p>There are a lot of technical benefits which can be achieved using a monorepo. With some work, I believe the same technical benefits can be obtained as when using a multi repo.</p>
+<p>There are a lot of technical benefits which can be achieved by using a monorepo. With some work, I believe the same technical benefits can be obtained as when using a multi repo.</p>
 
-<p>Most importantly though, introducing a tool generating transparency and alignment is far more important than any technical advantage.</p>
+<p>Most importantly though, introducing a tool that generates  transparency and alignment is far more important than any other technical advantage.</p>
 
                     </div>
                     

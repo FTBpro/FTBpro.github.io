@@ -118,7 +118,7 @@
         <i class="far fa-star"></i>
         Jun 11, 2019
         <i class="far fa-clock clock"></i>
-        6 min read
+        7 min read
     </span>					
 </div></div>			
                                                 
@@ -136,30 +136,29 @@
 
 <h1 id="scale-or-fail-the-story-behind-minute-media-s-editor-redesign">Scale or Fail: The Story Behind Minute Media’s Editor Redesign</h1>
 
-<p>In 2015, Minute Media released its Editor to more than 200 writers and 20 content managers. For the next almost two years, thousands of articles were only curated and published to <a href="https://www.90min.com">90min</a>, our old flagship football brand.</p>
+<p>In 2015, Minute Media released its Editor to more than 200 writers and 20 content managers. For the next  two years, thousands of articles were only curated and published to <a href="https://www.90min.com">90min</a>, our first football-focused brand.</p>
 
-<p>Since then though, the company has grown and added multiple brands to its name, such as <a href="https://www.12up.com">12up</a> - focused on American sports, <a href="https://www.dbltap.com">DBLTAP</a>  - our Esports site, <a href="https://www.floor8.com">Floor8</a>  - the entertainment hub, <a href="https://www.mentalfloss.com">Mental Floss</a>  - adestination for curious people, &amp; <a href="https://www.fanduel.com/theduel">TheDuel</a> - targeting fantasy football fans.</p>
+<p>Since then  however,  the company has grown and added multiple brands to its portfolio , such as <a href="https://www.12up.com">12up</a> - the voice of the fan in American sports,  <a href="https://www.dbltap.com">DBLTAP</a> - our esports experts <a href="https://www.floor8.com">Floor8</a>  - the entertainment hub, <a href="https://www.mentalfloss.com">Mental Floss</a>  - adestination for curious people, &amp; <a href="https://www.fanduel.com/theduel">TheDuel</a> (in partnership with <a href="https://www.fanduel.com">FanDuel</a>) -  the go-to place for fantasy football  and sports betting gurus.</p>
 
-<p>This meant that writers and content managers across all of these brands were using the Editor launched in 2015, which was originally conceptualized to fit the needs of only one specific brand. It became obvious the Editor was outdated and needed an overhaul.</p>
+<p>This meant that writers and content managers across all of these brands were using the same Editor launched in 2015, which was originally conceptualized to fit the needs of only one specific brand. It became obvious that the Editor was outdated and needed an overhaul.</p>
 
-<p>In this post, I&rsquo;ll discuss the process we underwent as a team, the challenges I faced as a product designer and the issues we solved along the way to defining and designing our new state of the art editor.</p>
+<p>In this post, I’ll discuss the process we underwent as a team, the challenges I faced as a product designer, and the issues we solved along the way to define and design our new state-of-the-art Editor.</p>
 
 <h2 id="defining-the-problem">Defining the problem</h2>
 
-<p>Multiple issues became more and more apparent. Firstly, the Editor’s user interface was designed based on 90min’s look and feel. Secondly, the Editor’s article output was HTML, which in technical terms is far from ideal. In order to support additional content formats and more flexibility when it comes to user experience, it should be changed to JSON.</p>
+<p>Multiple issues became more and more apparent as we began our research into creating a new editing platform. Firstly, the Editor’s user interface was designed based on 90min’s look and feel, so did not meet the needs of our other brands which span across different content verticals . Secondly, the Editor’s article output was HTML, which in technical terms, is far from ideal. In order to support additional content formats and create more flexibility in user experience, it had to be changed to JSON.</p>
 
-<p>In addition, the old editor posed challenges when it came to monetization. The article WYSIWYG created empty paragraphs which prevented optimizing the ad performance and element integration. Furthermore, the Editor has an unforgiving nature, which negatively affects user experience. Any error a writer does when placing an image will force him to delete, re-upload and reposition it before achieving a simple positional change. Whether it was from our editorial side or from the company’s strategic perspective, the editor made it very difficult for us to scale.</p>
+<p>In addition, the old Editor platform posed challenges when it came to monetization. The editor WYSIWYG created empty paragraphs which prevented optimizing the ad performance and element integration. Furthermore, the Editor has an unforgiving nature, which negatively affects the user experience. Any error a writer made when placing an image forced him/her to delete, re-upload, and reposition it before achieving a simple positional change. Whether it was from our editorial side or from the company’s strategic perspective, the Editor made it very difficult for us to scale our content.</p>
 
 <h2 id="research-first">Research first</h2>
 
-<p>As a product designer, every new project starts with research. After scanning the market, I got inspired by famous and universally established editors such as Medium, Storify, Wix, Behance &amp; Squarespace. Unique and serving different audiences, they are all well thought out, and several features in our new editor are based on some of their functionalities.</p>
+<p>As a product designer, every new project starts with research. After scanning the market, I got inspired by famous and universally established editors such as Medium, Storify, Wix, Behance, &amp; Squarespace.  They are all well thought out, unique, and are able to serve different audiences. In fact, several features in our new Editor are based on some of their functionalities.</p>
 
-<p>In addition to analyzing the market, I studied the habits and behaviors of our in-house editors and writers. I watched them work and did countless interviews, in which I asked about their experience with the product, their impressions of use, the main pain points, and the features they liked and/or would like to see improved.</p>
+<p>In addition to analyzing the market, I studied the habits and behaviors of our in-house editors and writers. I  shadowed them while they  created articles and  held countless interviews with our editorial teams, in which I asked about their experiences with the product, their impressions of use, their main pain points, and the features they liked and/or would like to see improved. I also sent out a survey to our editorial teams in other global offices (UK, US, Brazil) asking for their feedback and ideas on new features, templates, etc.</p>
 
-<p>It was important for me to involve all of the editorial team in the process, because when they eventually get access to the new Editor we are creating, they will feel they had a real impact on the new product.
-We created a survey and shared it with all of our writers and content managers across all of our offices around the world. In this survey, we collected data about their preferences regarding new features, new article templates, and potential ideas.</p>
+<p>It was important for me to involve all of the editorial teams in the process, because the new Editor we were creating had to be better than the original, and what better way to make the best editorial product, than to create it from an editorial lens?</p>
 
-<p>One of the main takeaways from this research was the need for a drag &amp; drop solution. More than 66% of all participants were looking for the ability to reorder paragraphs and media items. This led us to take a block-based approach when conceptualizing the editor.</p>
+<p>One of the main takeaways from  our  research was the editor’s need for a drag &amp; drop solution when forming articles. More than 66% of all participants were looking for the ability to reorder paragraphs and media items within the Editor. This led us to take a block-based approach when conceptualizing the editor.</p>
 
 <figure>
     <img src="https://images2.minutemediacdn.com/image/upload/f_auto,w_875/v1561366646/techblog/editor-survey-drag-and-drop-response.png"/> <figcaption>
@@ -179,8 +178,7 @@ We created a survey and shared it with all of our writers and content managers a
 </figure>
 
 
-<p>Because we are dealing with a storytelling product, we used a one-third-two-thirds layout. The two-thirds are used for the writing functionalities canvas and the one-third allows the user to insert any type of media to the article.
-Because this product will be licensed out, we added functionalities in order to facilitate the article creation flow. There is now a progress bar above the writing canvas, guiding the user through the different steps they need to take in order to publish an article. The sub-header not only includes the progress bar, but moreover, tooltips, a saving indication, and CTA buttons.</p>
+<p>Because we are dealing with a storytelling product, we used a one-third-two-thirds layout. The two-thirds are used for the writing functionalities canvas and the one-third allows the user to insert any type of media to the article. Because this product will be licensed out, we added functionalities in order to facilitate the article creation flow. There is now a progress bar above the writing canvas, guiding the user through the different steps they need to take in order to publish an article. The sub-header not only includes the progress bar, but moreover, tooltips, a saving indication, and CTA buttons.</p>
 
 <p>It forced us to think systematically and generically about where to write a new paragraph, how to edit text, how to add media to enrich the content and where the writer can see their process.</p>
 

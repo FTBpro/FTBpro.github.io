@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Minute Media - All rights reserved</copyright>
-    <lastBuildDate>Tue, 02 Jul 2019 09:42:03 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 16:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>
+      <link>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</link>
+      <pubDate>Thu, 03 Oct 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</guid>
+      <description>A successful relationship between the dev &amp;amp; design teams is key to achieving a good product. Unfortunately in most companies, this is not the case.</description>
+    </item>
+    
+    <item>
+      <title>Reporting Errors in Production: The Type/Stack Conflict</title>
+      <link>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</link>
+      <pubDate>Wed, 04 Sep 2019 16:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
+      <description>Lately, my team and I have started reporting errors to Sentry, and I hate to admit it, but only then did I notice that my errors weren’t telling me much.</description>
+    </item>
+    
+    <item>
+      <title>How A People-First Approach Will Help Your Pod Succeed</title>
+      <link>https://tech.minutemedia.com/how-a-people-first-approach-will-help-your-pod-succeed/</link>
+      <pubDate>Thu, 15 Aug 2019 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/how-a-people-first-approach-will-help-your-pod-succeed/</guid>
+      <description>You&amp;rsquo;ve reached the stage where you want to explore the use of a pod structure or maybe you&amp;rsquo;ve already started using it. You&amp;rsquo;ve reviewed the different guides which talk about processes, structure and efficiency, and while everything sounds great, you feel like something is missing.</description>
+    </item>
     
     <item>
       <title>Dynamic Ducks vs. Static Gophers</title>
@@ -22,18 +49,9 @@
     </item>
     
     <item>
-      <title>Scale or Fail: The Story Behind Minute Media’s Editor Redesign</title>
-      <link>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
-      
-      <guid>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</guid>
-      <description>Scale or Fail: The Story Behind Minute Media’s Editor Redesign In 2015, Minute Media released its Editor to more than 200 writers and 20 content managers.</description>
-    </item>
-    
-    <item>
       <title>Soft Landing in A New Job</title>
       <link>https://tech.minutemedia.com/soft-landing-in-a-new-job/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 17 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/soft-landing-in-a-new-job/</guid>
       <description>The first thing I found out in 2019 was that starting a new job as a senior developer was surprisingly difficult. The interview process is one thing, but when your first day finally arrives and you march in wearing your senior developer hat, that’s when it’s time to put your money where your mouth is.</description>
@@ -42,7 +60,7 @@
     <item>
       <title>Welcome to Mars! A Beginner&#39;s Guide to Hi-tech</title>
       <link>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-hi-tech/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Sat, 01 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-hi-tech/</guid>
       <description>Welcome to Mars! A Beginners Guide to Hi-tech
@@ -50,21 +68,12 @@ So, you got your dream job in a successful startup company. You passed about 6 i
     </item>
     
     <item>
-      <title>How A People-First Approach Will Help Your Pod Succeed</title>
-      <link>https://tech.minutemedia.com/how-a-people-first-approach-will-help-your-pod-succeed/</link>
-      <pubDate>Wed, 15 May 2019 15:25:19 +0200</pubDate>
+      <title>Scale or Fail: The Story Behind Minute Media’s Editor Redesign</title>
+      <link>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</link>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
-      <guid>https://tech.minutemedia.com/how-a-people-first-approach-will-help-your-pod-succeed/</guid>
-      <description>You&amp;rsquo;ve reached the stage where you want to explore the use of a pod structure or maybe you&amp;rsquo;ve already started using it. You&amp;rsquo;ve reviewed the different guides which talk about processes, structure and efficiency, and while everything sounds great, you feel like something is missing.</description>
-    </item>
-    
-    <item>
-      <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>
-      <link>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</link>
-      <pubDate>Tue, 16 Apr 2019 16:00:00 +0200</pubDate>
-      
-      <guid>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</guid>
-      <description>A successful relationship between the dev &amp;amp; design teams is key to achieving a good product. Unfortunately in most companies, this is not the case.</description>
+      <guid>https://tech.minutemedia.com/scale-or-fail-the-story-behind-minute-medias-editor-redesign/</guid>
+      <description>Scale or Fail: The Story Behind Minute Media’s Editor Redesign In 2015, Minute Media released its Editor to more than 200 writers and 20 content managers.</description>
     </item>
     
     <item>
@@ -75,15 +84,6 @@ So, you got your dream job in a successful startup company. You passed about 6 i
       <guid>https://tech.minutemedia.com/how-monorepo-is-helping-us-work-better/</guid>
       <description>Similar to many other mature startups moving towards their growth stage, Minute Media had to rebuild some of its infrastructure.
 Our initial infrastructure was a Monolithic application in Ruby on Rails, but we realized we needed to explore other options as our company and team grew.</description>
-    </item>
-    
-    <item>
-      <title>Reporting Errors in Production: The Type/Stack Conflict</title>
-      <link>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</link>
-      <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
-      
-      <guid>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
-      <description>Lately, my team and I have started reporting errors to Sentry, and I hate to admit it, but only then did I notice that my errors weren’t telling me much.</description>
     </item>
     
   </channel>

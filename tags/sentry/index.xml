@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Minute Media - All rights reserved</copyright>
-    <lastBuildDate>Sun, 10 Mar 2019 16:25:19 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 04 Sep 2019 16:25:19 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/tags/sentry/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Reporting Errors in Production: The Type/Stack Conflict</title>
       <link>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</link>
-      <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
+      <pubDate>Wed, 04 Sep 2019 16:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/reporting-errors-in-production-the-type-stack-conflict/</guid>
       <description>Lately, my team and I have started reporting errors to Sentry, and I hate to admit it, but only then did I notice that my errors weren’t telling me much.</description>

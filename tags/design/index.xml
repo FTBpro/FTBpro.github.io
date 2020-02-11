@@ -7,28 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Minute Media - All rights reserved</copyright>
-    <lastBuildDate>Tue, 11 Jun 2019 15:25:19 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 16:00:00 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/tags/design/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>
+      <link>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</link>
+      <pubDate>Thu, 03 Oct 2019 16:00:00 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</guid>
+      <description>A successful relationship between the dev &amp;amp; design teams is key to achieving a good product. Unfortunately in most companies, this is not the case.</description>
+    </item>
+    
+    <item>
       <title>Welcome to Mars! A Beginner&#39;s Guide to Hi-tech</title>
       <link>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-hi-tech/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Sat, 01 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/welcome-to-mars-a-beginners-guide-to-hi-tech/</guid>
       <description>Welcome to Mars! A Beginners Guide to Hi-tech
 So, you got your dream job in a successful startup company. You passed about 6 interviews, nailed a home assignment (in my case a design assignment), signed an 11 page contract (in English vs.</description>
-    </item>
-    
-    <item>
-      <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>
-      <link>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</link>
-      <pubDate>Tue, 16 Apr 2019 16:00:00 +0200</pubDate>
-      
-      <guid>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</guid>
-      <description>A successful relationship between the dev &amp;amp; design teams is key to achieving a good product. Unfortunately in most companies, this is not the case.</description>
     </item>
     
   </channel>

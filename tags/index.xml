@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Minute Media - All rights reserved</copyright>
-    <lastBuildDate>Wed, 15 May 2019 15:25:19 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 15 Aug 2019 15:25:19 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>Agile</title>
       <link>https://tech.minutemedia.com/tags/agile/</link>
-      <pubDate>Wed, 15 May 2019 15:25:19 +0200</pubDate>
+      <pubDate>Thu, 15 Aug 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/agile/</guid>
       <description></description>
@@ -42,7 +42,7 @@
     <item>
       <title>Content</title>
       <link>https://tech.minutemedia.com/tags/content/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/content/</guid>
       <description></description>
@@ -51,7 +51,7 @@
     <item>
       <title>Cross Functional</title>
       <link>https://tech.minutemedia.com/tags/cross-functional/</link>
-      <pubDate>Wed, 15 May 2019 15:25:19 +0200</pubDate>
+      <pubDate>Thu, 15 Aug 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/cross-functional/</guid>
       <description></description>
@@ -60,7 +60,7 @@
     <item>
       <title>Design</title>
       <link>https://tech.minutemedia.com/tags/design/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Thu, 03 Oct 2019 16:00:00 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/design/</guid>
       <description></description>
@@ -69,7 +69,7 @@
     <item>
       <title>Development</title>
       <link>https://tech.minutemedia.com/tags/development/</link>
-      <pubDate>Tue, 16 Apr 2019 16:00:00 +0200</pubDate>
+      <pubDate>Thu, 03 Oct 2019 16:00:00 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/development/</guid>
       <description></description>
@@ -78,7 +78,7 @@
     <item>
       <title>Editor</title>
       <link>https://tech.minutemedia.com/tags/editor/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/editor/</guid>
       <description></description>
@@ -87,7 +87,7 @@
     <item>
       <title>Errors</title>
       <link>https://tech.minutemedia.com/tags/errors/</link>
-      <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
+      <pubDate>Wed, 04 Sep 2019 16:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/errors/</guid>
       <description></description>
@@ -96,7 +96,7 @@
     <item>
       <title>Golang</title>
       <link>https://tech.minutemedia.com/tags/golang/</link>
-      <pubDate>Tue, 02 Jul 2019 09:42:03 +0000</pubDate>
+      <pubDate>Wed, 04 Sep 2019 16:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/golang/</guid>
       <description></description>
@@ -105,7 +105,7 @@
     <item>
       <title>High Tech</title>
       <link>https://tech.minutemedia.com/tags/high-tech/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Sat, 01 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/high-tech/</guid>
       <description></description>
@@ -114,7 +114,7 @@
     <item>
       <title>Job</title>
       <link>https://tech.minutemedia.com/tags/job/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 17 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/job/</guid>
       <description></description>
@@ -123,7 +123,7 @@
     <item>
       <title>Platform</title>
       <link>https://tech.minutemedia.com/tags/platform/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/platform/</guid>
       <description></description>
@@ -132,7 +132,7 @@
     <item>
       <title>Pods</title>
       <link>https://tech.minutemedia.com/tags/pods/</link>
-      <pubDate>Wed, 15 May 2019 15:25:19 +0200</pubDate>
+      <pubDate>Thu, 15 Aug 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/pods/</guid>
       <description></description>
@@ -141,7 +141,7 @@
     <item>
       <title>Process</title>
       <link>https://tech.minutemedia.com/tags/process/</link>
-      <pubDate>Tue, 16 Apr 2019 16:00:00 +0200</pubDate>
+      <pubDate>Thu, 03 Oct 2019 16:00:00 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/process/</guid>
       <description></description>
@@ -150,7 +150,7 @@
     <item>
       <title>Publisher</title>
       <link>https://tech.minutemedia.com/tags/publisher/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/publisher/</guid>
       <description></description>
@@ -168,7 +168,7 @@
     <item>
       <title>Redesign</title>
       <link>https://tech.minutemedia.com/tags/redesign/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/redesign/</guid>
       <description></description>
@@ -177,7 +177,7 @@
     <item>
       <title>Research</title>
       <link>https://tech.minutemedia.com/tags/research/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/research/</guid>
       <description></description>
@@ -195,7 +195,7 @@
     <item>
       <title>Scrum</title>
       <link>https://tech.minutemedia.com/tags/scrum/</link>
-      <pubDate>Wed, 15 May 2019 15:25:19 +0200</pubDate>
+      <pubDate>Thu, 15 Aug 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/scrum/</guid>
       <description></description>
@@ -204,7 +204,7 @@
     <item>
       <title>Sentry</title>
       <link>https://tech.minutemedia.com/tags/sentry/</link>
-      <pubDate>Sun, 10 Mar 2019 16:25:19 +0200</pubDate>
+      <pubDate>Wed, 04 Sep 2019 16:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/sentry/</guid>
       <description></description>
@@ -213,7 +213,7 @@
     <item>
       <title>Social</title>
       <link>https://tech.minutemedia.com/tags/social/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 17 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/social/</guid>
       <description></description>
@@ -222,7 +222,7 @@
     <item>
       <title>Start Up</title>
       <link>https://tech.minutemedia.com/tags/start-up/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Sat, 01 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/start-up/</guid>
       <description></description>
@@ -231,7 +231,7 @@
     <item>
       <title>Teams</title>
       <link>https://tech.minutemedia.com/tags/teams/</link>
-      <pubDate>Wed, 15 May 2019 15:25:19 +0200</pubDate>
+      <pubDate>Thu, 15 Aug 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/teams/</guid>
       <description></description>
@@ -240,7 +240,7 @@
     <item>
       <title>Tech</title>
       <link>https://tech.minutemedia.com/tags/tech/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 17 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/tech/</guid>
       <description></description>
@@ -258,7 +258,7 @@
     <item>
       <title>Ui</title>
       <link>https://tech.minutemedia.com/tags/ui/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/ui/</guid>
       <description></description>
@@ -267,7 +267,7 @@
     <item>
       <title>Ux</title>
       <link>https://tech.minutemedia.com/tags/ux/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Wed, 01 May 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/ux/</guid>
       <description></description>
@@ -276,7 +276,7 @@
     <item>
       <title>Work</title>
       <link>https://tech.minutemedia.com/tags/work/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Mon, 17 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/work/</guid>
       <description></description>
@@ -285,7 +285,7 @@
     <item>
       <title>Working Methods</title>
       <link>https://tech.minutemedia.com/tags/working-methods/</link>
-      <pubDate>Tue, 11 Jun 2019 15:25:19 +0200</pubDate>
+      <pubDate>Sat, 01 Jun 2019 15:25:19 +0200</pubDate>
       
       <guid>https://tech.minutemedia.com/tags/working-methods/</guid>
       <description></description>

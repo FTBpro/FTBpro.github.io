@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Minute Media - All rights reserved</copyright>
-    <lastBuildDate>Thu, 03 Oct 2019 16:00:00 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 12:12:12 +0200</lastBuildDate>
     
 	<atom:link href="https://tech.minutemedia.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How Minute Media&#39;s Matching Algorithm Helps Publishers Take Their Video Offering to The Next Level</title>
+      <link>https://tech.minutemedia.com/how-minute-medias-matching-algorithm-helps-publishers-take-their-video-offering-to-the-next-level/</link>
+      <pubDate>Mon, 16 Dec 2019 12:12:12 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/how-minute-medias-matching-algorithm-helps-publishers-take-their-video-offering-to-the-next-level/</guid>
+      <description>My father always orders the same ice cream. ‘One cone with vanilla and chocolate, please’ - I must have heard him say this sentence a thousand times.</description>
+    </item>
     
     <item>
       <title>DIY: Creating a Great Relationship Between Dev &amp; Design</title>

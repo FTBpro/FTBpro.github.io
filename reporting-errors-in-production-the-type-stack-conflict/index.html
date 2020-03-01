@@ -15,18 +15,17 @@
 <title>Reporting Errors in Production: The Type/Stack Conflict | Minute Media Tech and Product Blog</title>
 
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.typekit.net/iaf2ktd.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-	crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+	rel="stylesheet">
 
 
 
-<link rel="stylesheet" href="/css/style.min.b51e072c15eeb480833be3ba1e277039.css">
-
-
-<meta property="og:title" content="Reporting Errors in Production: The Type/Stack Conflict"/>
+<link rel="stylesheet" href="/css/style.min.b51e072c15eeb480833be3ba1e277039.css"><meta property="og:title" content="Reporting Errors in Production: The Type/Stack Conflict"/>
 <meta property="og:description" content="A walkthrouh on how you can enable Sentry to report custom errors, and how to get the relevant stack trace"/>
 <meta property="og:type" content="article"/>
 
@@ -47,8 +46,8 @@
         </a>
         
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -56,11 +55,11 @@
         <div class="collapse navbar-collapse" id="navbarMediumish">
             
             <ul class="navbar-nav ml-auto">
-                 
+                
                 <li class="nav-item ">
                     <a class="nav-link" href="https://www.minutemedia.com/careers">Careers</a>
                 </li>
-                 
+                
                 <li class="nav-item ">
                     <a class="nav-link" href="https://www.minutemedia.com/about-us">About Us</a>
                 </li>
@@ -71,41 +70,43 @@
     </div>
 </nav>
 
-
         <div class="site-content">
             <div class="container blog-main-content__wrapper">
-    <div class="main-content">
-        
-        <div class="container  pagewrap">
-            <div class="row">
-                
-                <div class="col-md-2 pl-0"><div class="share">
+<div class="main-content">
+    
+    <div class="container  pagewrap">
+        <div class="row">
+            
+            <div class="col-md-2 pl-0"><div class="share">
     <p>Share</p>
     <ul>
         <li class="ml-1 mr-1">
-        <a target="_blank" href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20Type%2fStack%20Conflict&url=https%3a%2f%2ftech.minutemedia.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
-        <i class="fab fa-twitter"></i>
-        </a>
+            <a target="_blank"
+                href="https://twitter.com/intent/tweet?text=Reporting%20Errors%20in%20Production%3a%20The%20Type%2fStack%20Conflict&url=https%3a%2f%2ftech.minutemedia.com%2freporting-errors-in-production-the-type-stack-conflict%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
         </li>
-        
+
         <li class="ml-1 mr-1">
-        <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2ftech.minutemedia.com%2freporting-errors-in-production-the-type-stack-conflict" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
-        <i class="fab fa-facebook-f"></i>
-        </a>
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2ftech.minutemedia.com%2freporting-errors-in-production-the-type-stack-conflict%2f"
+                onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
         </li>
-        
+
     </ul>
 
     
 </div></div>
-                                
-                <div class="col-md-9 flex-first flex-md-unordered">
-                    <div class="mainheading">
-                        
-                        <h1 class="posttitle">Reporting Errors in Production: The Type/Stack Conflict</h1> 
-                        	
-                        
-                        <div class="post-top-meta">
+            
+            <div class="col-md-9 flex-first flex-md-unordered">
+                <div class="mainheading">
+                    
+                    <h1 class="posttitle">Reporting Errors in Production: The Type/Stack Conflict</h1>
+                    
+                    
+                    <div class="post-top-meta">
 <div class="author-thumb__box">
     <img class="author-thumb" src='https://images2.minutemediacdn.com/image/upload/ar_1:1,c_fill,g_auto,h_200,w_200/v1563961990/techblog/oren.jpg' alt='Oren Rosen'>
 </div>
@@ -119,19 +120,19 @@
         <i class="far fa-clock clock"></i>
         7 min read
     </span>					
-</div></div>			
-                                                
-                    </div>
+</div></div>
+                    
+                </div>
 
+                
+                
+                <img class="featured-image img-fluid" src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_464,w_825/v1555678170/shape/cover/entertainment/boy-mic-20760e0d49a5f7bbe5a78c6a8e314319.jpg" alt="thumbnail for this post">
+                
+                
+
+                
+                <div class="article-post">
                     
-                    
-                        <img class="featured-image img-fluid" src="https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_464,w_825/v1555678170/shape/cover/entertainment/boy-mic-20760e0d49a5f7bbe5a78c6a8e314319.jpg" alt="thumbnail for this post">
-                    
-                    
-                    
-                    
-                    <div class="article-post">
-                        
 
 <p>Lately, my team and I have started reporting errors to Sentry, and  I hate to admit it, but only then did I notice that my errors  weren’t telling me much.. I would either get my custom error types, or a relevant stack trace, but not both.</p>
 
@@ -369,46 +370,46 @@ In the next post, we’ll see how we can wrap an error of a dependency, but stil
 
 <p>Meanwhile, the <a href="https://go.googlesource.com/proposal/+/master/design/29934-error-values.md">Go 2.0 errors inspection proposal</a>, which just came out a couple of months ago, shares some <code>pkg/errors</code> ideas. It is  very interesting to read and I’m excited to see what will happen with errors in Go in the future.</p>
 
-                    </div>
-                    
-                    
-                    <div class="after-post-tags">
-                        <ul class="tags">
+                </div>
+
+                
+                <div class="after-post-tags">
+                    <ul class="tags">
                         
                         <li>
-                        <a href="/tags/golang">golang</a>
+                            <a href="/tags/golang">golang</a>
                         </li>
                         
                         <li>
-                        <a href="/tags/errors">errors</a>
+                            <a href="/tags/errors">errors</a>
                         </li>
                         
                         <li>
-                        <a href="/tags/sentry">sentry</a>
+                            <a href="/tags/sentry">sentry</a>
                         </li>
                         
-                        </ul>
-                    </div>
+                    </ul>
+                </div>
+                
+
+                
+                <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                    <a class="d-block col-md-6" href="/diy-creating-a-great-relationship-between-dev-and-design/"> &laquo; DIY: Creating a Great Relationship Between Dev &amp; Design</a>
                     
                     
-                    
-                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
-                    
-                        <a class="d-block col-md-6" href="/diy-creating-a-great-relationship-between-dev-and-design"> &laquo; DIY: Creating a Great Relationship Between Dev &amp; Design</a>
-                    
-                    
-                        <a class="d-block col-md-6 text-lg-right" href="/how-a-people-first-approach-will-help-your-pod-succeed">How A People-First Approach Will Help Your Pod Succeed &raquo;</a>
+                    <a class="d-block col-md-6 text-lg-right" href="/how-a-people-first-approach-will-help-your-pod-succeed/">How A People-First Approach Will Help Your Pod Succeed &raquo;</a>
                     
                     <div class="clearfix"></div>
-                    </div>
-                    
                 </div>
                 
             </div>
+            
         </div>
-        
-        
     </div>
+    
+    
+</div>
 
 
             </div>

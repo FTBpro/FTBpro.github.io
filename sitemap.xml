@@ -3,6 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tech.minutemedia.com/how-minute-medias-matching-algorithm-helps-publishers-take-their-video-offering-to-the-next-level/</loc>
+    <lastmod>2019-01-27T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/diy-creating-a-great-relationship-between-dev-and-design/</loc>
     <lastmod>2019-10-03T16:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -93,6 +100,13 @@
   </url>
   
   <url>
+    <loc>https://tech.minutemedia.com/tags/context/</loc>
+    <lastmod>2019-01-27T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/tags/cross-functional/</loc>
     <lastmod>2019-08-15T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -149,8 +163,15 @@
   </url>
   
   <url>
+    <loc>https://tech.minutemedia.com/tags/matching/</loc>
+    <lastmod>2019-01-27T16:00:00+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://tech.minutemedia.com/</loc>
-    <lastmod>2019-10-03T16:00:00+02:00</lastmod>
+    <lastmod>2019-01-27T16:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -171,7 +192,7 @@
   
   <url>
     <loc>https://tech.minutemedia.com/posts/</loc>
-    <lastmod>2019-10-03T16:00:00+02:00</lastmod>
+    <lastmod>2019-01-27T16:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -284,6 +305,13 @@
   <url>
     <loc>https://tech.minutemedia.com/tags/ux/</loc>
     <lastmod>2019-05-01T15:25:19+02:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tech.minutemedia.com/tags/video/</loc>
+    <lastmod>2019-01-27T16:00:00+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>

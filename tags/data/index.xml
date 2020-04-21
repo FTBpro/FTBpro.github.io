@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data on Minute Media Tech and Product Blog</title>
+    <link>https://tech.minutemedia.com/tags/data/</link>
+    <description>Recent content in Data on Minute Media Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Minute Media - All rights reserved</copyright>
+    <lastBuildDate>Sun, 12 Apr 2020 15:25:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://tech.minutemedia.com/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>4 Things to Remember When Implementing CCPA From a Product Point of View </title>
+      <link>https://tech.minutemedia.com/things-to-remember-when-implementing-ccpa-from-a-product-point-of-view/</link>
+      <pubDate>Sun, 12 Apr 2020 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/things-to-remember-when-implementing-ccpa-from-a-product-point-of-view/</guid>
+      <description>Over the last few years, there has been growing scrutiny when it comes to data collection. People are starting to care about their privacy. This trend reached its peak in early 2018.</description>
+    </item>
+    
+  </channel>
+</rss>

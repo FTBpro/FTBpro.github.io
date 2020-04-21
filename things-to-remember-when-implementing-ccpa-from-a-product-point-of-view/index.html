@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta content="The journey towards privacy compliance is one with great importance, here are some takeaways that will help you with the implementation process" name="description">
+
+
+<link rel="canonical" href="https://tech.minutemedia.com/things-to-remember-when-implementing-ccpa-from-a-product-point-of-view">
+
+<meta name="generator" content="Hugo 0.54.0" />
+
+<link rel="icon" href="/images/mm-favicon.png">
+
+<title>4 Things to Remember When Implementing CCPA From a Product Point of View  | Minute Media Tech and Product Blog</title>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.typekit.net/iaf2ktd.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i"
+	rel="stylesheet">
+
+
+
+<link rel="stylesheet" href="/css/style.min.b51e072c15eeb480833be3ba1e277039.css"><meta property="og:title" content="4 Things to Remember When Implementing CCPA From a Product Point of View "/>
+<meta property="og:description" content="The journey towards privacy compliance is one with great importance, here are some takeaways that will help you with the implementation process"/>
+<meta property="og:type" content="article"/>
+
+<meta property="og:image" content="https://images2.minutemediacdn.com/image/upload/c_fill,g_north,h_464,w_825/v1587051658/techblog/ccpa_cover_1.jpg"/>                       
+
+
+    </head>
+    <body>
+        <div class="blog-wrapper">
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="https://tech.minutemedia.com//">
+
+            
+            <img src="/images/logo-secondary.png" alt="logo">
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.minutemedia.com/careers">Careers</a>
+                </li>
+                
+                <li class="nav-item ">
+                    <a class="nav-link" href="https://www.minutemedia.com/about-us">About Us</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+        <div class="site-content">
+            <div class="container blog-main-content__wrapper">
+<div class="main-content">
+    
+    <div class="container  pagewrap">
+        <div class="row">
+            
+            <div class="col-md-2 pl-0"><div class="share">
+    <p>Share</p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank"
+                href="https://twitter.com/intent/tweet?text=4%20Things%20to%20Remember%20When%20Implementing%20CCPA%20From%20a%20Product%20Point%20of%20View%20&url=https%3a%2f%2ftech.minutemedia.com%2fthings-to-remember-when-implementing-ccpa-from-a-product-point-of-view%2f"
+                onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https%3a%2f%2ftech.minutemedia.com%2fthings-to-remember-when-implementing-ccpa-from-a-product-point-of-view%2f"
+                onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+    </ul>
+
+    
+</div></div>
+            
+            <div class="col-md-9 flex-first flex-md-unordered">
+                <div class="mainheading">
+                    
+                    <h1 class="posttitle">4 Things to Remember When Implementing CCPA From a Product Point of View </h1>
+                    
+                    
+                    <div class="post-top-meta">
+<div class="author-thumb__box">
+    <img class="author-thumb" src='https://images2.minutemediacdn.com/image/upload/c_fill,f_auto,h_200,w_200/v1587051658/techblog/Amit.jpg' alt='Amit Epstin'>
+</div>
+
+<div >
+    <a target="_blank" class="link-dark">Amit Epstin</a><br>
+    <span class="author-description">
+        
+        <i class="far fa-star"></i>
+        Apr 12, 2020
+        <i class="far fa-clock clock"></i>
+        5 min read
+    </span>					
+</div></div>
+                    
+                </div>
+
+                
+                
+                <img class="featured-image img-fluid" src="https://images2.minutemediacdn.com/image/upload/c_fill,g_north,h_464,w_825/v1587051658/techblog/ccpa_cover_1.jpg" alt="thumbnail for this post">
+                
+                
+
+                
+                <div class="article-post">
+                    
+
+<p>Over the last few years, there has been growing scrutiny when it comes to data collection. People are starting to care about their privacy. This trend reached its peak in early 2018. The Cambridge-Analytica scandal revolving around Facebook exposed just how far companies and institutions are willing to go in the absence of regulation.</p>
+
+<p>Cambridge Analytica collected data on millions of Facebook profiles without user consent. The data was subsequently used in order to create targeted political advertising campaigns. This scandal may have been a significant factor in changing the rules of the game and driving certain lawmakers to create action items in order to secure end-user privacy.</p>
+
+<p>In May 2018 the European Union launched the General Data Protection Regulation (GDPR), which outlines a host of privacy-related obligations and huge fines for non-compliance. In the US, it seems that one of the first major states to create privacy rules with significant obligations and sanctions for non-compliance is California, where legislators passed the California Consumer Privacy Act (CCPA), effective from January 1st, 2020. However, it looks like the CCPA has yet to be finalized, as updates are continuously coming, so the input provided herein may not be final as well.</p>
+
+<p>Along with the rest of the media industry, we at Minute Media rolled up our sleeves and started working on understanding and implementing the new regulations. As someone who has been leading this initiative from a technical standpoint, I’m happy to share the key points I’ve learned along the way, all from a product point of view. In essence, from my point of view, there are four very important takeaways.</p>
+
+<h2 id="1-can-my-gdpr-eprivacy-consent-management-solution-work-for-ccpa-as-well">1. Can my GDPR/ePrivacy consent management solution work for CCPA as well?</h2>
+
+<p>The regulators of the EU have a more proactive approach, requiring opt-in consent and pushing for a certain level of detail when informing end-users about data collection undertaken by publishers as well as our partners. In addition, by default, browser cookies of EU users are to be disabled until they opt-in. On the other hand, the CCPA is based on a slightly different approach, where the user takes the first action by opting-out (e.g. interact with a “Do not sell my info” button). Therefore, the required product solution for each regulation is different: A very proactive consent pop-up to EU users vs. a “Do not sell my info” button for California users.</p>
+
+<p>Therefore, businesses should generally consider not having one solution for both GDPR and CCPA.</p>
+
+<h2 id="2-how-can-you-implement-it">2. How can you implement it?</h2>
+
+<p>Once possible, CCPA product compliance solution can be one that detects the state of the user and displays a “Do not sell my info”- click to action button, if they are located in California. When selected, it may take the user to a pop-up (this could also be a landing page), allowing the user to request that his personal data will not be transferred to third parties, and also linking to the privacy policy where it is explained how to request access or deletion of data.</p>
+
+<p>Where necessary, only users who pass a verification process will be allowed to actually receive their personal data or delete it. As part of the implementation, you can either build these services yourselves or use a third-party vendor. The benefit of a third-party vendor is that they have specific expertise in this field which can help in providing the optimal solution to your end-users. However, keep in mind that as regulation and internal business develops an external solution may not be as responsive to internal needs and may result in losing a certain amount of control over how you manage your internal compliance.</p>
+
+<h2 id="3-where-can-i-place-the-click-to-action-button">3. Where can I place the click to action button?</h2>
+
+<p>I’ve encountered this question occasionally during the implementation process.
+It seems that currently, the CCPA does not exactly specify where the button should be located on the website’s homepage. Some publishers place it on the navigation, others on the top of the page, while most of them place it within the footer. To ensure that the button is not missed by a user, it may be beneficial to consider placing it in two locations, such as the site menu and the footer button in order to make it reachable from each point of your website.</p>
+
+<h2 id="4-do-i-also-need-to-adjust-my-privacy-policy">4. Do I also need to adjust my Privacy Policy?</h2>
+
+<p>Yes. Just adding the click-to-action button is likely not enough. The privacy policy needs to have certain references to the CCPA, including, for example, elaborated notices that explain how your company has sold and disclosed personal data of California residents in the preceding 12 months, the main rights that California residents have with respect to their personal data, and, in certain cases, even publish specific metrics regarding the number of user requests you have received in relation to the CCPA. You should review your privacy policy and adjust as necessary.</p>
+
+<p>In his high school graduation speech, Drake once said <em>“Sometimes it’s the journey that teaches you a lot about your destination”</em>. For us here at MinuteMedia, the journey towards privacy compliance is one of great importance, therefore, we are paying close attention, allocating resources and learning as much as we can, in order to preserve our users’ privacy.</p>
+
+<p>There is much more to cover, but these four takeaways should help kickstart the implementation process.</p>
+
+<p>Feel free to reach out for any feedback to amit.e@minutemedia.com</p>
+
+<p><strong>This blog was written by a product manager at MinuteMedia, it is not exhaustive, and in no way constitutes as any legal advice. If you have any legal questions regarding this issue, please contact a lawyer.</strong></p>
+
+<p>Photo and image portfolio by Good_Stock, <a href="https://www.shutterstock.com/">shutterstock</a></p>
+
+                </div>
+
+                
+                <div class="after-post-tags">
+                    <ul class="tags">
+                        
+                        <li>
+                            <a href="/tags/ccpa">ccpa</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/product">product</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/development">development</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/publisher">publisher</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/legal">legal</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/privacy">privacy</a>
+                        </li>
+                        
+                        <li>
+                            <a href="/tags/data">data</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+
+                
+                <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                    
+                    <a class="d-block col-md-6 text-lg-right" href="/design-review-not-another-bullst-meeting/">Design Review - Not Another Bulls***t Meeting &raquo;</a>
+                    
+                    <div class="clearfix"></div>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+    
+</div>
+
+
+            </div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright Minute Media - All rights reserved
+            </div>
+        </div>
+    </div>
+</footer>
+
+        </div>
+
+    
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>    
+    
+<script src="/js/techblog.min.bf4ac0cbcff485fae275c79004c52498.js" ></script>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-23669758-28', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+        </div>
+    </body>
+</html>

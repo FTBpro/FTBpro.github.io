@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feedback on Minute Media Tech and Product Blog</title>
+    <link>https://tech.minutemedia.com/tags/feedback/</link>
+    <description>Recent content in Feedback on Minute Media Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Minute Media - All rights reserved</copyright>
+    <lastBuildDate>Sat, 29 Feb 2020 15:25:19 +0200</lastBuildDate>
+    
+	<atom:link href="https://tech.minutemedia.com/tags/feedback/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Design Review - Not Another Bulls***t Meeting</title>
+      <link>https://tech.minutemedia.com/design-review-not-another-bullst-meeting/</link>
+      <pubDate>Sat, 29 Feb 2020 15:25:19 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/design-review-not-another-bullst-meeting/</guid>
+      <description>Design Review meetings, or as we at Minute Media like to call them, Product Reviews, are some of the best tools you can use to increase transparency and relations among teams, and of course, the quality of the product.</description>
+    </item>
+    
+  </channel>
+</rss>

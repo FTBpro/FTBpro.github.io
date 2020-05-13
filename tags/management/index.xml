@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Management on Minute Media Tech and Product Blog</title>
+    <link>https://tech.minutemedia.com/tags/management/</link>
+    <description>Recent content in Management on Minute Media Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Minute Media - All rights reserved</copyright>
+    <lastBuildDate>Sun, 01 Mar 2020 12:12:12 +0200</lastBuildDate>
+    
+	<atom:link href="https://tech.minutemedia.com/tags/management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Voltax: How to Make the Most of Minute Media&#39;s Video Management System</title>
+      <link>https://tech.minutemedia.com/how-to-make-the-most-of-minutemedias-vms/</link>
+      <pubDate>Sun, 01 Mar 2020 12:12:12 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/how-to-make-the-most-of-minutemedias-vms/</guid>
+      <description>When choosing the right Online Video Platform for your business, it’s important to make sure certain basic features and functionalities are provided. In this regard, Minute Media’s Video Management System ticks all the boxes.</description>
+    </item>
+    
+  </channel>
+</rss>

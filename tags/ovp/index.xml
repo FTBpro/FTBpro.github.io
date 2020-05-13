@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ovp on Minute Media Tech and Product Blog</title>
+    <link>https://tech.minutemedia.com/tags/ovp/</link>
+    <description>Recent content in Ovp on Minute Media Tech and Product Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Minute Media - All rights reserved</copyright>
+    <lastBuildDate>Tue, 12 May 2020 12:12:12 +0200</lastBuildDate>
+    
+	<atom:link href="https://tech.minutemedia.com/tags/ovp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Voltax Video: The Unique Benefits of Minute Media’s Online Video Platform</title>
+      <link>https://tech.minutemedia.com/unique-benefits-of-ovp/</link>
+      <pubDate>Tue, 12 May 2020 12:12:12 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/unique-benefits-of-ovp/</guid>
+      <description>It is an industry fact that having a robust video strategy is one of the most important aspects of a successful digital media business. According to Forbes, “By 2022, online videos will make up more than 82% of all consumer internet traffic — 15 times higher than it was in 2017.</description>
+    </item>
+    
+    <item>
+      <title>Voltax: How to Make the Most of Minute Media&#39;s Video Management System</title>
+      <link>https://tech.minutemedia.com/how-to-make-the-most-of-minutemedias-vms/</link>
+      <pubDate>Sun, 01 Mar 2020 12:12:12 +0200</pubDate>
+      
+      <guid>https://tech.minutemedia.com/how-to-make-the-most-of-minutemedias-vms/</guid>
+      <description>When choosing the right Online Video Platform for your business, it’s important to make sure certain basic features and functionalities are provided. In this regard, Minute Media’s Video Management System ticks all the boxes.</description>
+    </item>
+    
+  </channel>
+</rss>

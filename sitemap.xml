@@ -3,13 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://tech.minutemedia.com/unique-benefits-of-ovp/</loc>
-    <lastmod>2020-05-12T12:12:12+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://tech.minutemedia.com/benefit-from-minute-medias-impressive-video-library/</loc>
     <lastmod>2020-04-20T12:12:12+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -142,13 +135,6 @@
   </url>
   
   <url>
-    <loc>https://tech.minutemedia.com/tags/benefits/</loc>
-    <lastmod>2020-05-12T12:12:12+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://tech.minutemedia.com/tags/ccpa/</loc>
     <lastmod>2020-04-12T15:25:19+02:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -262,14 +248,14 @@
   
   <url>
     <loc>https://tech.minutemedia.com/</loc>
-    <lastmod>2020-05-12T12:12:12+02:00</lastmod>
+    <lastmod>2020-04-20T12:12:12+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://tech.minutemedia.com/tags/ovp/</loc>
-    <lastmod>2020-05-12T12:12:12+02:00</lastmod>
+    <lastmod>2020-03-01T12:12:12+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -290,7 +276,7 @@
   
   <url>
     <loc>https://tech.minutemedia.com/posts/</loc>
-    <lastmod>2020-05-12T12:12:12+02:00</lastmod>
+    <lastmod>2020-04-20T12:12:12+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
@@ -438,13 +424,6 @@
   <url>
     <loc>https://tech.minutemedia.com/tags/vms/</loc>
     <lastmod>2020-03-01T12:12:12+02:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tech.minutemedia.com/tags/voltax/</loc>
-    <lastmod>2020-05-12T12:12:12+02:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
